@@ -135,7 +135,7 @@ final class ChannelInputStream extends InputStream {
         if (closed || finished)
           throw new IOException("SSH channel input stream is closed");
         if (buffer == null)
-          buffer = new byte[channel.getLocalWindowSizeMax()];
+          buffer = new byte[channel.lwsize_max];
         if (length > buffer.length - size)
           throw new IOException("SSH channel DATA exceeds its receive window: pending=" + size
               + ", incoming=" + length + ", capacity=" + buffer.length);
