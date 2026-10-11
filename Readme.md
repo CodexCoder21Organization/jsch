@@ -157,3 +157,16 @@ Disconnecting a channel or session locally releases pending data and wakes waiti
 
 ## Changes since fork:
 See [ChangeLog.md](ChangeLog.md)
+
+## Organization patch publication
+
+The organization fork publishes `com.github.mwiede:jsch:0.2.18-reader1` to
+https://kotlin.directory. This version names the consumer's patch line; its source
+is the upstream development tree with the bounded receive-stream corrections at
+[5fc2610](https://github.com/CodexCoder21Organization/jsch/commit/5fc2610e050f3629f5c4b296d16a99e279cc70b7),
+proposed in https://github.com/mwiede/jsch/pull/1178. It includes the normal
+multi-release JAR and optional dependencies from this fork's Maven build.
+
+Build with JDK 25 and Maven 3.9.16: `mvn -B -DskipTests package`. Publish the
+resulting regular library JAR and flattened POM through the Maven artifact
+publisher's `--artifact-dir` HTTP upload to https://api.kotlin.directory/upload.
