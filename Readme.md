@@ -131,6 +131,23 @@ When you have an artifact `foo:bar`, which contains `com.jcraft:jsch` as a trans
     * `jsch.max_auth_tries`
       * analogous to `JSch.setConfig("MaxAuthTries", "...")`
 
+## Channel input streams
+
+Call `Channel.getInputStream()` and, when needed, `getExtInputStream()` before connecting
+the channel. The connection reader places data in a bounded buffer and keeps processing
+other channels while an application reader is busy. Stdout and stderr share the channel's
+receive credit. Credit is returned only as the application reads bytes; a full receive
+window makes the remote writer wait without blocking the local connection reader or
+discarding bytes.
+
+The receive window configured with `Channel.setLocalWindowSizeMax(int)` bounds pending
+data across both streams. Each stream allocates at most that window size, lazily; the old
+`max_input_buffer_size` pipe setting does not control these buffers. Drain stdout and
+stderr concurrently when both may contain a large output. Remote EOF and close preserve
+already received bytes for final reads. Closing an active input stream cancels its channel
+and releases both buffers; closing a completed stream releases only its remaining bytes.
+Disconnecting a channel or session locally releases pending data and wakes waiting readers.
+
 ## Other Projects Using JSch
 
 * Jsync https://github.com/fizzed/jsync - Provides a simple, efficient, reliable, and pure Java rsync-like file and
@@ -140,3 +157,16 @@ When you have an artifact `foo:bar`, which contains `com.jcraft:jsch` as a trans
 
 ## Changes since fork:
 See [ChangeLog.md](ChangeLog.md)
+
+## Organization patch publication
+
+The organization fork publishes `com.github.mwiede:jsch:0.2.18-reader1` to
+https://kotlin.directory. This version names the consumer's patch line; its source
+is the upstream development tree with the bounded receive-stream corrections at
+[5fc2610](https://github.com/CodexCoder21Organization/jsch/commit/5fc2610e050f3629f5c4b296d16a99e279cc70b7),
+proposed in https://github.com/mwiede/jsch/pull/1178. It includes the normal
+multi-release JAR and optional dependencies from this fork's Maven build.
+
+Build with JDK 25 and Maven 3.9.16: `mvn -B -DskipTests package`. Publish the
+resulting regular library JAR and flattened POM through the Maven artifact
+publisher's `--artifact-dir` HTTP upload to https://api.kotlin.directory/upload.
