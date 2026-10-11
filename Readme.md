@@ -132,8 +132,7 @@ receive credit. Credit is returned only as the application reads bytes; a full r
 window makes the remote writer wait without blocking the local connection reader or
 discarding bytes.
 
-The receive window configured with `Channel.setLocalWindowSizeMax(int)` bounds pending
-data across both streams. Each stream allocates at most that window size, lazily; the old
+The channel's receive window bounds pending data across both streams. Each stream allocates at most that window size, lazily; the old
 `max_input_buffer_size` pipe setting does not control these buffers. Drain stdout and
 stderr concurrently when both may contain a large output. Remote EOF and close preserve
 already received bytes for final reads. Closing an active input stream cancels its channel

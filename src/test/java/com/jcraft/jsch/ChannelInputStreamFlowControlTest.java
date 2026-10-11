@@ -34,7 +34,7 @@ class ChannelInputStreamFlowControlTest {
   }
 
   private static void closeUnreadStream(boolean interruptConsumer) throws Exception {
-    int window = 64 * 1024;
+    int window = 1024 * 1024;
     CountDownLatch payloadWritten = new CountDownLatch(1);
     CountDownLatch finish = new CountDownLatch(1);
     CountDownLatch remoteClosed = new CountDownLatch(1);
@@ -67,7 +67,6 @@ class ChannelInputStreamFlowControlTest {
       session = connect(server);
       session.setConfig("max_input_buffer_size", Integer.toString(window));
       ChannelExec stream = (ChannelExec) session.openChannel("exec");
-      stream.setLocalWindowSizeMax(window);
       stream.setCommand("stream");
       InputStream input = stream.getInputStream();
       stream.connect(1000);
@@ -232,7 +231,7 @@ class ChannelInputStreamFlowControlTest {
   @Test
   @Timeout(30)
   void receiveCreditIsReturnedOnlyForConsumedBytes() throws Exception {
-    int window = 64 * 1024;
+    int window = 1024 * 1024;
     byte[] payload = new byte[window];
     for (int i = 0; i < payload.length; i++)
       payload[i] = (byte) (i % 251);
@@ -260,7 +259,6 @@ class ChannelInputStreamFlowControlTest {
       // test separates consumption-based credit from merely choosing a larger pipe.
       session.setConfig("max_input_buffer_size", Integer.toString(window));
       ChannelExec stream = (ChannelExec) session.openChannel("exec");
-      stream.setLocalWindowSizeMax(window);
       stream.setCommand("stream");
       InputStream input = stream.getInputStream();
       stream.connect(1000);
@@ -299,7 +297,7 @@ class ChannelInputStreamFlowControlTest {
   @Test
   @Timeout(30)
   void stdoutAndStderrShareCreditAndDrainAcrossBufferWraps() throws Exception {
-    int window = 64 * 1024;
+    int window = 1024 * 1024;
     byte[] first = new byte[window / 2];
     byte[] next = new byte[window / 4];
     Arrays.fill(first, (byte) 17);
@@ -337,7 +335,6 @@ class ChannelInputStreamFlowControlTest {
       session = connect(server);
       session.setConfig("max_input_buffer_size", Integer.toString(window));
       ChannelExec stream = (ChannelExec) session.openChannel("exec");
-      stream.setLocalWindowSizeMax(window);
       stream.setCommand("stream");
       InputStream input = stream.getInputStream();
       InputStream error = stream.getExtInputStream();
@@ -498,7 +495,7 @@ class ChannelInputStreamFlowControlTest {
   @Test
   @Timeout(30)
   void heldCreditWriteDoesNotHoldTheChannelReaderMonitor() throws Exception {
-    int window = 64 * 1024;
+    int window = 1024 * 1024;
     CountDownLatch full = new CountDownLatch(1);
     CountDownLatch finish = new CountDownLatch(1);
     CountDownLatch creditWriteEntered = new CountDownLatch(1);
@@ -593,7 +590,6 @@ class ChannelInputStreamFlowControlTest {
       server.start();
       session = connect(server, sockets);
       ChannelExec stream = (ChannelExec) session.openChannel("exec");
-      stream.setLocalWindowSizeMax(window);
       stream.setCommand("stream");
       InputStream input = stream.getInputStream();
       stream.connect(1000);
