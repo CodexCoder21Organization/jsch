@@ -13,14 +13,14 @@ A real local Apache MINA SSHD peer holds its actual acknowledgement write behind
 Validation:
 
 - Unmodified master and reader2: late cleanup fails 3/3, pending disconnect fails 3/3, no-reply session cleanup passes 3/3; no errors or skipped cases.
-- Product-only mutation control: late cleanup fails 3/3 with only the product fix removed; zero errors or skipped cases.
-- Fixed master unit suite: 507 tests pass, zero failures/errors/skipped; all nine lifecycle cases pass their first attempts.
-- Reader2-based publication unit suite: full suite/package gate pending; source and release suffix are pushed.
+- Product-only mutation control: late cleanup fails 3/3 with only the product fix removed; zero errors/skipped, then passes 3/3 with the fix restored.
+- Fixed master unit suite: 507 tests pass, zero failures/errors/skipped; all nine lifecycle cases pass their first attempts, with no retry records.
+- Reader2-based publication unit suite: 215 tests pass, zero failures/errors/skipped or retry records; all nine lifecycle cases and eight existing receive-flow cases pass their first attempts.
 - Dedicated test and source review passes completed; reader2 receive buffers and credit writer unchanged. All 285 checked-in reader2 Java sources matched the shipped reader2 sources before this change.
 
 Existing-test edits: none. No timeout or iteration values changed.
 
-Publication: reader3 build and upload pending the publication-branch gate. The [reader2-based branch](https://github.com/CodexCoder21Organization/jsch/tree/wip/jschfix2-fix) preserves the reader2 implementation and adds this fix plus the release suffix. This PR contains the same fix on master.
+Publication: published `com.github.mwiede:jsch:0.2.18-reader3` with publisher 0.0.6. All four public files match the local SHA-256; the [public POM](https://kotlin.directory/com/github/mwiede/jsch/0.2.18-reader3/jsch-0.2.18-reader3.pom) declares the coordinate. The [reader2-based branch](https://github.com/CodexCoder21Organization/jsch/tree/wip/jschfix2-fix) preserves the reader2 implementation and adds this fix plus the release suffix. This PR contains the same fix on master.
 
 [Native XML and review evidence](https://github.com/CodexCoder21Organization/jsch/tree/wip/jschfix2-evidence).
 

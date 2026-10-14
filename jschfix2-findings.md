@@ -3,10 +3,10 @@ Started 2026-10-14 16:09 UTC; deadline 17:24 UTC.
 
 Plan:
 - [done] Read common.md/all addenda, Testing Architecture and Engineering Philosophy, predecessor findings, repository README/Readme.md and publisher README; locate reader2 provenance.
-- [in progress] Write real-peer public API test; checkpoint on both requested branches; show assertion red on both bases.
-- [pending] Fix late acknowledgement ordering; checkpoint; mutation control and 3/3 first attempts on both branches.
-- [pending] Existing publication suite; dedicated test/source reviews; one open PR against master.
-- [pending] Build and publish reader3 from reader2 base; verify; finish process cleanup and brief audit.
+- [done] Write real-peer public API test; checkpoint on both requested branches; show assertion red on both bases.
+- [done] Fix late acknowledgement ordering; checkpoint; mutation control and 3/3 first attempts on both branches.
+- [done] Existing publication suite; dedicated test/source reviews; one open PR against master.
+- [done] Build and publish reader3 from reader2 base; verify; finish process cleanup and brief audit.
 
 OBSERVED: Fresh checkout master 43838f1, no root AGENTS.md. Remote reader2 branch wip/chanfix3-reader2 is b58c800 based on jsch-0.2.18. POM identifies reader2; reader3 POM probe is absent. Java 25 available from Coursier without repository toolchain edits.
 OBSERVED: Prior evidence fixture holds the actual Apache MINA SSHD acknowledgement write future. Its valid contract waits for peer close then allows the corrected same-session open. Diagnostic-only assertions are excluded from the new test.
@@ -82,3 +82,29 @@ OBSERVED: All code/test gates and both independent reviews complete. No unexpect
 2026-10-14 17:12 UTC — OBSERVED: Authorized publisher 0.0.6 completed with exit 0 using artifact-dir and api.kotlin.directory/upload. All four public files (POM, library jar, sources jar, Javadoc jar) return 200 and match their local SHA-256. Public POM declares the expected reader3 coordinate. Publication verification JSON records source head and all file hashes.
 PUBLISHED com.github.mwiede:jsch:0.2.18-reader3
 OBSERVED: Final PR description update and process/artifact cleanup remain. No merge, consumer bump, deployment or production-management access occurred.
+
+2026-10-14 17:21 UTC — DONE. Final PR description read back exactly with both suite counts, mutation proof and publication. PR remains OPEN/non-draft against master. Both source trees match the tested/built trees and both working trees are clean. Temporary Maven outputs removed. Required ps -eo pid,args -ww check confirms zero owned compiler/test/publisher or sleep processes; no owned build-slot records remain. All standalone invocations are terminal, both review agents finished, and no recurring loop was created.
+
+Brief audit:
+| Item | State and proof |
+|---|---|
+| Verify reader2 base/history/POM | DONE: all285 checked-in sources match shipped reader2; generated version rule and POM checked |
+| Test-written/red/fix checkpoints on both branches | DONE: both branches pushed from first test milestone and after each later milestone |
+| Failing-first on both bases | DONE: late cleanup FAIL3/3, pending disconnect FAIL3/3, no-reply control PASS3/3 on each base |
+| Shared monitor and recipient cleanup | DONE: same fix on both bases; new cases PASS3/3 each; independent source review |
+| Product-only mutation | DONE: main contract FAIL3/3 with only source fix removed, then PASS3/3 restored |
+| Existing publication suite | DONE:215/215 first attempts, zero failures/errors/skipped/retry records; eight receive-flow cases pass; existing tests untouched |
+| Master suite and one non-draft PR | DONE:507/507 first attempts, zero failures/errors/skipped; one open fork PR against master |
+| README/Javadoc no-reply limitation | DONE: session termination required when no peer recipient arrives |
+| Authorized publication | DONE:PUBLISHED com.github.mwiede:jsch:0.2.18-reader3; publisher0.0.6 exit0; allfour public file hashes match |
+| Stop and scope | DONE:no merge, deploy, consumer bump or production management; zero remaining owned processes |
+
+## Challenges for the orchestrator (final)
+OBSERVED: Shared build slots consumed most waiting time; every wait was bounded and slots were left untouched without proof they were unused. A cleanup tool review stopped the shell command style for removing temporary Maven files; explicit Python removal scoped to the two build-output directories completed safely. No challenge/handoff service call under common.md.
+
+## FLAKES ENCOUNTERED
+None. All failures were the intended old-source lifecycle assertions; no unexpected first-attempt failure or retry occurred.
+
+Terminal status-report snapshot: original request complete within75minutes; source PR open, reader3 published and retrieved, every required gate complete. Remaining lane work:none. Lessons: late replies carry the peer recipient needed for cleanup; final open ownership and reply publication must share a monitor; verify the publication base against shipped source and preserve it separately from a newer default branch.
+
+READY FOR ORCHESTRATOR REVIEW https://github.com/CodexCoder21Organization/jsch/pull/3 53da7fee512cf3e488778618c26679b2f43d3d5e PUBLISHED com.github.mwiede:jsch:0.2.18-reader3
