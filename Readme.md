@@ -138,5 +138,13 @@ When you have an artifact `foo:bar`, which contains `com.jcraft:jsch` as a trans
 * Blaze https://github.com/fizzed/blaze - A way to run Java files as scripts, with powerful SSH, SFTP, and rsync-like
   features built right in.
 
+## Stream open cleanup
+
+If `Channel.connect(timeout)` times out, a later open acknowledgement releases the
+allocated peer stream with a close message. Disconnecting a pending stream also ends
+its local open call, and a later acknowledgement releases the peer allocation.
+If the peer never sends a reply, the client has no peer stream identifier to address;
+call `Session.disconnect()` to release the peer's remaining streams.
+
 ## Changes since fork:
 See [ChangeLog.md](ChangeLog.md)
