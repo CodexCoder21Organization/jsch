@@ -66,3 +66,6 @@ OBSERVED: Extended published-source provenance check matches all 285 checked-in 
 
 2026-10-14 16:55 UTC — OBSERVED: Fixed master full Maven unit suite PASS: 507 tests across 30 XML files, 0 failures, 0 errors, 0 skipped. New late cleanup, pending disconnect and no-reply controls each pass 3/3 first attempts; no retry runner. Green master checkpoint pushed. Full native XML records retained for review; no unexpected test failure encountered.
 OBSERVED: Reader2 mutation is queued for the newly released slot. Publication remains gated on restored-fix full suite/build; no artifact upload yet. About 29 minutes remain.
+
+2026-10-14 16:57 UTC — OBSERVED: Product-only mutation control completed: 3 tests, 3 intended peer-cleanup assertion failures, 0 errors, 0 skipped. The new test remained in place while only Channel.java/Session.java were restored to the baseline. Original fixed source restored afterward.
+OBSERVED: Reader3 POM is still absent (404). Publication suffix prepared on reader2 base; only POM version changes after the fixed source checkpoint. Full unit suite and package build are the next gate; artifact upload has not started.
