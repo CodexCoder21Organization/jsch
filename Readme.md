@@ -139,5 +139,13 @@ already received bytes for final reads. Closing an active input stream cancels i
 and releases both buffers; closing a completed stream releases only its remaining bytes.
 Disconnecting a channel or session locally releases pending data and wakes waiting readers.
 
+## Stream open cleanup
+
+If `Channel.connect(timeout)` times out, a later open acknowledgement releases the
+allocated peer stream with a close message. Disconnecting a pending stream also ends
+its local open call, and a later acknowledgement releases the peer allocation.
+If the peer never sends a reply, the client has no peer stream identifier to address;
+call `Session.disconnect()` to release the peer's remaining streams.
+
 ## Changes since fork:
 See [ChangeLog.md](ChangeLog.md)

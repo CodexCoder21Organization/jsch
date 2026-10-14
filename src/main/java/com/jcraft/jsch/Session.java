@@ -1931,11 +1931,12 @@ public class Session {
             int r = buf.getInt();
             long rws = buf.getUInt();
             int rps = buf.getInt();
-            if (channel != null) {
-              channel.setRemoteWindowSize(rws);
-              channel.setRemotePacketSize(rps);
-              channel.open_confirmation = true;
-              channel.setRecipient(r);
+            if (channel == null || !channel.setOpenConfirmation(r, rws, rps)) {
+              // The late reply identifies the allocated peer stream even after local removal.
+              packet.reset();
+              buf.putByte((byte) SSH_MSG_CHANNEL_CLOSE);
+              buf.putInt(r);
+              write(packet);
             }
             break;
           case SSH_MSG_CHANNEL_OPEN_FAILURE:
