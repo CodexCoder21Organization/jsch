@@ -1,0 +1,31 @@
+{
+  "coordinate": "com.github.mwiede:jsch:0.2.18-reader3",
+  "publisher_exit": 0,
+  "release_head": "1eb14d3aa3b4a3e991408f891760df6d3e020e37",
+  "files": [
+    {
+      "file": "jsch-0.2.18-reader3-javadoc.jar",
+      "status": 200,
+      "sha256": "0084313741145b484a7ba3bca857893b456234c0eb92cd88fbc2331e1ad7c060",
+      "bytes": 510616
+    },
+    {
+      "file": "jsch-0.2.18-reader3-sources.jar",
+      "status": 200,
+      "sha256": "8eaf78aca232cd7d1073ac10c139c0d69e7171885a3b0f6bb256686418421e8d",
+      "bytes": 530339
+    },
+    {
+      "file": "jsch-0.2.18-reader3.jar",
+      "status": 200,
+      "sha256": "ce66af1522f6465e86d92eeedee3cdd5abade60592081c3b4d515fbb75233419",
+      "bytes": 549698
+    },
+    {
+      "file": "jsch-0.2.18-reader3.pom",
+      "status": 200,
+      "sha256": "33998ba9fa5593b13aa34c4d55ca40c8d9774be4931f7eb9f2de7ad5b162ebf5",
+      "bytes": 2111
+    }
+  ]
+}
