@@ -1,2 +1,6 @@
 [wip/jschfix2-master 48ad529] Resume held peer messages through normal serialized handling
  1 file changed, 4 insertions(+), 1 deletion(-)
+{"errors": 0, "failures": 6, "kind": "final-reversal", "retry_records": 0, "rows": 6, "skipped": 0}
+{"errors": 0, "failures": 0, "kind": "final-green", "retry_records": 0, "rows": 6, "skipped": 0}
+{"errors": 0, "failures": 0, "kind": "master-suite", "retry_records": 0, "rows": 525, "skipped": 0}
+MASTER GATES COMPLETE; inherited protected-file formatter constraint preserved

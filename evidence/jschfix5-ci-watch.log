@@ -1,0 +1,7 @@
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::compareAndSwapObject has been called by scala.runtime.LazyVals$ (file:/home/u/bin/cs)
+WARNING: Please consider reporting this to the maintainers of class scala.runtime.LazyVals$
+WARNING: sun.misc.Unsafe::compareAndSwapObject will be removed in a future release
+[watchman] INFO: cannot determine the required checks of CodexCoder21Organization/jsch base branch 'master' (repository rulesets require nothing; classic branch protection: branch not protected (HTTP 404)) -> falling back to waiting on ALL checks; any failed check makes the verdict red
+[watchman] OK: all checks for CodexCoder21Organization/jsch#3 head 48ad5294 completed green (check suites: 104807403415) -> next: enqueue for merge per repo policy (gh pr merge, or GraphQL enqueuePullRequest where merge queues are mandatory)
+[watchman] RESULT: GREEN exit=0 target=CodexCoder21Organization/jsch#3
