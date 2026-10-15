@@ -1,3 +1,7 @@
+* [0.2.18-reader7](https://kotlin.directory/com/github/mwiede/jsch/0.2.18-reader7/)
+  * Published 2026-10-15T08:19:16.198794+00:00 by `codexcoder21` from source [eb2b5036f596117165a6bf968ec30950cfa0eb77](https://github.com/CodexCoder21Organization/jsch/commit/eb2b5036f596117165a6bf968ec30950cfa0eb77).
+  * JAR SHA-256: `c7384e0d78e34a08c87091209faf359b2511fd143e794c5a74af8fa0ff76d931`. Local suite: 248/248 passing; clean rebuild and downloaded JAR byte-identical.
+
 * [0.2.17](https://github.com/mwiede/jsch/releases/tag/jsch-0.2.17)
    * Add PBKDF2-HMAC-SHA512/256 & PBKDF2-HMAC-SHA512/224, which are both supported as of Java 21.
 * [0.2.16](https://github.com/mwiede/jsch/releases/tag/jsch-0.2.16)
