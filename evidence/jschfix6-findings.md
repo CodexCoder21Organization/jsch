@@ -3,8 +3,8 @@ Started 2026-10-15 04:01 UTC; deadline 04:46 UTC.
 
 Plan:
 - [done] Required reading, exact fresh checkout and public fail-first regression.
-- [in progress] Remove failed-write expectations under the packet lock; green new cases and preserved neighbors; product reversal.
-- [pending] Full master and reader6 release suites once; publish and verify public checksums.
+- [done] Remove failed-write expectations under the packet lock; green new cases and preserved neighbors; product reversal.
+- [in progress] Full master and reader6 release suites once; publish and verify public checksums.
 - [pending] Update PR, required remote check, separate reviews, evidence checkpoint and process cleanup.
 
 OBSERVED: Fresh clone is exactly 48ad529432ac01a78c9c3a712be072a4e46b1c8c on wip/jschfix2-master. Rebase origin/master unchanged; default branch is master. No root AGENTS.md. README and Readme.md read. Explicit task authorizes reader6 publication and required CI watch. No handoff operations or report-challenge action under lane addenda.
@@ -123,3 +123,20 @@ OBSERVED: External reversal initially stopped at JUnit discovery before any row:
 2026-10-15T04:13:11.312820+00:00 — OBSERVED: {"errors": 0, "failures": 9, "kind": "reversal", "retry_records": 0, "rows": 9, "skipped": 0}; native XML and full stacks preserved in /home/u/lanes/util20261014/out/jschfix6-reversal-results.
 
 2026-10-15 04:14 UTC — OBSERVED: Final formatted new test with exact48ad5294 product overlay is red9/9 at intended count assertions, zero errors/skips/retries. Full master suite now executes once on local commit ae7ffa2085031d69e2d6d4c0dc5e55b9879de5dc. Final release source/test checkpoint prepared at abf4a15, based on reader5; package gate follows master to keep full suites serialized. Both code/test review passes completed with no blocker.
+
+2026-10-15 04:15 UTC — OBSERVED: Correction milestone checkpoint pushed after36/36 targeted and9/9 intended product-only reversal: https://github.com/CodexCoder21Organization/jsch/commit/ae7ffa2085031d69e2d6d4c0dc5e55b9879de5dc. Release source is remote at https://github.com/CodexCoder21Organization/jsch/commit/abf4a15 (wip/jschfix6-reader6). Native XML and independent review checkpoint at https://github.com/CodexCoder21Organization/jsch/tree/wip/jschfix6-evidence. Full master suite is still active and is not yet claimed passed. First checkpoint was the red test at https://github.com/CodexCoder21Organization/jsch/commit/b695917. No merge/queue/deploy or service-host access occurred.
+
+2026-10-15 04:16 UTC — OBSERVED: GitHub API reports kotlin.build(remote) completed/success on exact ae7ffa2085031d69e2d6d4c0dc5e55b9879de5dc. Informational check was also present/success on that snapshot; no wait or re-request was made for it. Native full master rows completed so far103, zero failures/errors; final verdict still pending. Master/release FailedOpenReplyTest bytes match SHA-2561532d6e33df9326c29b95cf49087220e994ee14cea9e013d3e2485bf92951e79. Release source full head abf4a1524694362e671f3d78a38965ac689281ac.
+
+FOLLOW-UP anchors retained: numeric ids are assigned at https://github.com/CodexCoder21Organization/jsch/blob/48ad529432ac01a78c9c3a712be072a4e46b1c8c/src/main/java/com/jcraft/jsch/Channel.java#L93 using the31-bit mask; generation identity remains a separate allocator correction. Protected lifecycle SHA-256 remains eb523698b133d41a85650bab5650a7da18e282ce3c5d6b0720199f98689835d5; existing formatting complaint is expressly retained. Neither file nor validator configuration is changed.
+
+## 2026-10-15 04:21 UTC — RUNNING status report
+Original request: close the failed outgoing-open expected-reply finding on https://github.com/CodexCoder21Organization/jsch/pull/3, publish reader6, update PR and stop at required remote green, without merging. Fresh PR state is OPEN, merge state CLEAN, mergedAt null, exact source head https://github.com/CodexCoder21Organization/jsch/commit/ae7ffa2085031d69e2d6d4c0dc5e55b9879de5dc.
+The session records an expected reply before writing an outgoing open under its existing packet lock. A finally block removes that id if the write fails before returning and leaves the original error intact. Subsequent replies for a failed attempt are ignored, while successful abandoned opens keep the established one-reply/one-close policy.
+Changes: native new tests red9/9, green9/9 plus unchanged neighbors27/27, final product reversal9/9 intended failures; all first attempts, no errors/skips/retries. Native full master is active with 103 completed rows and no failures/errors so far; KeyExchangeTest's deliberate three-byte enumeration loops explain its long CPU work (prior full suite spent275.6seconds in that class). No test limit or iteration was changed. Release source and all passing evidence are checkpointed remotely; reader6 artifact/package is pending.
+Delegated work at a glance: one gpt-6-luna max invocation completed independent test review and a distinct production/release review, with no concrete blocker. Live team status confirms it is completed; no delegated work remains active. Review source/test observations are retained in jschfix6-review.md.
+CI: bounded build-watchman0.0.21 single assessment exited GREEN0 on this exact head. Required kotlin.build(remote) is successful; no watcher remains alive and no informational check wait or suite rerequest was made.
+Blockers: no user decision required. Inherited formatter and numeric-id follow-ups remain explicitly excluded. Free disk7.2GiB at04:21; every remaining build checks the6GiB minimum before starting. No handoff operation under lane addenda; scheduler tools unavailable, so reports stay here during active work.
+Landing parallelization sweep: CI and reviews finished alongside native verification; release source, artifact validation and PR draft are prepared. Full master/release suites remain sequential to respect the one-full-local-suite rule.
+Next steps: finish master once, package/test reader6 once, publish and verify public checksums, update/read back the PR, archive final evidence and verify process cleanup.
+Lessons: pair state registration with exceptional cleanup in the same critical section; use ordered real-peer markers to prove reader behavior; apply a maintenance correction on the existing published lineage while preserving its unrelated guards.
