@@ -8,17 +8,22 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.ByteArrayOutputStream;
+import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.security.spec.ECGenParameterSpec;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import org.apache.sshd.common.SshConstants;
@@ -41,12 +46,6 @@ import org.apache.sshd.server.session.SessionFactory;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Timeout;
 
-import java.net.Socket;
-import java.io.FilterInputStream;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-import java.util.concurrent.atomic.AtomicBoolean;
 class ChannelLateOpenRekeyTest {
   private static final int OPEN_TIMEOUT_MILLIS = 1_000;
   private static final String OPEN_TIMEOUT_MESSAGE = "channel is not opened.";
@@ -72,33 +71,41 @@ class ChannelLateOpenRekeyTest {
       ChannelExec channel = (ChannelExec) session.openChannel("exec");
       channel.setCommand("late");
       assertEquals(OPEN_TIMEOUT_MESSAGE,
-          assertThrows(JSchException.class, () -> channel.connect(OPEN_TIMEOUT_MILLIS)).getMessage());
+          assertThrows(JSchException.class, () -> channel.connect(OPEN_TIMEOUT_MILLIS))
+              .getMessage());
       assertTrue(peer.openReplyHeld.await(5, TimeUnit.SECONDS));
       sockets.armed.set(true);
       peer.releaseHeldOpenReply();
       assertTrue(sockets.bytesHeld.await(5, TimeUnit.SECONDS), "Client did not hold reply bytes");
       session.rekey();
-      System.out.println("TRACE: late confirmation written before client rekey; client rekey returned; releasing confirmation bytes");
+      System.out.println(
+          "TRACE: late confirmation written before client rekey; client rekey returned; releasing confirmation bytes");
       sockets.release.countDown();
       CountDownLatch keepAliveDone = new CountDownLatch(1);
       AtomicReference<Throwable> keepAliveFailure = new AtomicReference<>();
       Session current = session;
       Thread keepAlive = new Thread(() -> {
-        try { current.sendKeepAliveMsg(); }
-        catch (Throwable failure) { keepAliveFailure.set(failure); }
-        finally { keepAliveDone.countDown(); }
+        try {
+          current.sendKeepAliveMsg();
+        } catch (Throwable failure) {
+          keepAliveFailure.set(failure);
+        } finally {
+          keepAliveDone.countDown();
+        }
       }, "late-open-keepalive");
       keepAlive.setDaemon(true);
       keepAlive.start();
       boolean progressed = keepAliveDone.await(5, TimeUnit.SECONDS);
       boolean closed = peer.firstStreamClosed.getCount() == 0;
-      System.out.println("TRACE: rekeyWriterCompleted=" + progressed + " peerClosed=" + closed + " sessionConnected=" + session.isConnected());
+      System.out.println("TRACE: rekeyWriterCompleted=" + progressed + " peerClosed=" + closed
+          + " sessionConnected=" + session.isConnected());
       assertTrue(progressed, "Late confirmation stopped rekey and the next transport write");
       assertNull(keepAliveFailure.get(), "Keepalive write failed");
       assertTrue(session.isConnected(), "Rekey terminated the session");
     } finally {
       sockets.release.countDown();
-      if (session != null) session.disconnect();
+      if (session != null)
+        session.disconnect();
       server.stop(true);
     }
   }
@@ -118,7 +125,8 @@ class ChannelLateOpenRekeyTest {
       ChannelExec rejected = (ChannelExec) session.openChannel("exec");
       rejected.setCommand("late");
       assertEquals(OPEN_TIMEOUT_MESSAGE,
-          assertThrows(JSchException.class, () -> rejected.connect(OPEN_TIMEOUT_MILLIS)).getMessage());
+          assertThrows(JSchException.class, () -> rejected.connect(OPEN_TIMEOUT_MILLIS))
+              .getMessage());
       assertTrue(peer.openReplyHeld.await(5, TimeUnit.SECONDS));
       peer.releaseHeldOpenReply();
       fresh = (ChannelExec) session.openChannel("exec");
@@ -135,10 +143,14 @@ class ChannelLateOpenRekeyTest {
       assertArrayEquals(FRESH_RESPONSE, response);
       assertEquals(0, peer.receivedCloseCount.get(), "Client sent CLOSE after late OPEN_FAILURE");
       assertTrue(session.isConnected());
-      System.out.println("TRACE: late OPEN_FAILURE processed; fresh exec complete; client CLOSE count=" + peer.receivedCloseCount.get());
+      System.out
+          .println("TRACE: late OPEN_FAILURE processed; fresh exec complete; client CLOSE count="
+              + peer.receivedCloseCount.get());
     } finally {
-      if (fresh != null) fresh.disconnect();
-      if (session != null) session.disconnect();
+      if (fresh != null)
+        fresh.disconnect();
+      if (session != null)
+        session.disconnect();
       server.stop(true);
     }
   }
@@ -164,21 +176,25 @@ class ChannelLateOpenRekeyTest {
         ChannelExec late = (ChannelExec) session.openChannel("exec");
         late.setCommand("late");
         assertEquals(OPEN_TIMEOUT_MESSAGE,
-            assertThrows(JSchException.class, () -> late.connect(OPEN_TIMEOUT_MILLIS)).getMessage());
+            assertThrows(JSchException.class, () -> late.connect(OPEN_TIMEOUT_MILLIS))
+                .getMessage());
         assertTrue(peer.openReplyHeld.await(5, TimeUnit.SECONDS), "Peer did not hold confirmation");
         long recipient = peer.latestChannel.get().getChannelId();
         sockets.prepare();
         peer.releaseHeldOpenReply();
-        assertTrue(sockets.bytesHeld.await(5, TimeUnit.SECONDS), "Client did not hold confirmation");
+        assertTrue(sockets.bytesHeld.await(5, TimeUnit.SECONDS),
+            "Client did not hold confirmation");
         peer.holdRenegotiation.set(true);
         session.rekey();
-        assertTrue(peer.renegotiationHeld.await(5, TimeUnit.SECONDS), "Peer did not hold renegotiation");
+        assertTrue(peer.renegotiationHeld.await(5, TimeUnit.SECONDS),
+            "Peer did not hold renegotiation");
         CountDownLatch readerProgress = observeReaderProgress(session);
         sockets.release.countDown();
         peer.sendReaderMarker();
         assertTrue(readerProgress.await(5, TimeUnit.SECONDS),
             "Reader stopped after the late confirmation during renegotiation");
-        assertEquals(round, peer.receivedCloseCount.get(), "Close arrived before renegotiation completed");
+        assertEquals(round, peer.receivedCloseCount.get(),
+            "Close arrived before renegotiation completed");
         peer.releaseRenegotiation();
         Session current = session;
         Future<?> write = writer.submit(() -> {
@@ -186,21 +202,28 @@ class ChannelLateOpenRekeyTest {
           return null;
         });
         write.get(5, TimeUnit.SECONDS);
-        assertTrue(peer.keepAliveReceived.await(5, TimeUnit.SECONDS), "Peer did not receive next write");
-        assertTrue(peer.streamReleased.await(5, TimeUnit.SECONDS), "Peer did not release the channel");
+        assertTrue(peer.keepAliveReceived.await(5, TimeUnit.SECONDS),
+            "Peer did not receive next write");
+        assertTrue(peer.streamReleased.await(5, TimeUnit.SECONDS),
+            "Peer did not release the channel");
         assertEquals(round + 1, peer.receivedCloseCount.get(), "Deferred close count changed");
         assertEquals(1, java.util.Collections.frequency(peer.closeRecipients, recipient),
             "Peer recipient did not receive exactly one close");
         assertFalse(late.isConnected(), "Late confirmation reopened the local channel");
         assertTrue(session.isConnected(), "Renegotiation ended the connection");
       }
-      assertEquals(2, peer.closeRecipients.size(), "A deferred close was repeated across exchanges");
+      assertEquals(2, peer.closeRecipients.size(),
+          "A deferred close was repeated across exchanges");
     } finally {
       sockets.release.countDown();
-      if (session != null) session.disconnect();
+      if (session != null)
+        session.disconnect();
       writer.shutdownNow();
-      assertTrue(writer.awaitTermination(5, TimeUnit.SECONDS), "Transport writer did not stop");
-      server.stop(true);
+      try {
+        assertTrue(writer.awaitTermination(5, TimeUnit.SECONDS), "Transport writer did not stop");
+      } finally {
+        server.stop(true);
+      }
     }
   }
 
@@ -224,23 +247,27 @@ class ChannelLateOpenRekeyTest {
       assertTrue(sockets.bytesHeld.await(5, TimeUnit.SECONDS), "Client did not hold confirmation");
       peer.holdRenegotiation.set(true);
       session.rekey();
-      assertTrue(peer.renegotiationHeld.await(5, TimeUnit.SECONDS), "Peer did not hold renegotiation");
+      assertTrue(peer.renegotiationHeld.await(5, TimeUnit.SECONDS),
+          "Peer did not hold renegotiation");
       CountDownLatch readerProgress = observeReaderProgress(session);
       sockets.release.countDown();
       peer.sendReaderMarker();
       assertTrue(readerProgress.await(5, TimeUnit.SECONDS),
           "Reader stopped before the connection could discard its deferred close");
-      assertEquals(0, peer.receivedCloseCount.get(), "Close arrived while renegotiation was pending");
+      assertEquals(0, peer.receivedCloseCount.get(),
+          "Close arrived while renegotiation was pending");
       session.disconnect();
       assertTrue(peer.connectionClosed.await(5, TimeUnit.SECONDS), "Peer connection did not end");
-      assertTrue(peer.firstStreamClosed.await(5, TimeUnit.SECONDS), "Peer allocation remained open");
+      assertTrue(peer.firstStreamClosed.await(5, TimeUnit.SECONDS),
+          "Peer allocation remained open");
       assertEquals(0, peer.receivedCloseCount.get(), "Connection end wrote the deferred close");
       assertFalse(late.isConnected(), "Late confirmation reopened the local channel");
       assertFalse(session.isConnected(), "Connection remained active after disconnect");
       assertEquals(0, peer.allocatedStreams.get(), "Peer retained a channel after connection end");
     } finally {
       sockets.release.countDown();
-      if (session != null) session.disconnect();
+      if (session != null)
+        session.disconnect();
       server.stop(true);
     }
   }
@@ -248,9 +275,13 @@ class ChannelLateOpenRekeyTest {
   private static CountDownLatch observeReaderProgress(Session session) {
     CountDownLatch progress = new CountDownLatch(1);
     session.setLogger(new Logger() {
-      public boolean isEnabled(int level) { return true; }
+      public boolean isEnabled(int level) {
+        return true;
+      }
+
       public void log(int level, String message) {
-        if ("Received SSH_MSG_UNIMPLEMENTED for 12345".equals(message)) progress.countDown();
+        if ("Received SSH_MSG_UNIMPLEMENTED for 12345".equals(message))
+          progress.countDown();
       }
     });
     return progress;
@@ -272,13 +303,21 @@ class ChannelLateOpenRekeyTest {
     final AtomicBoolean armed = new AtomicBoolean();
     CountDownLatch bytesHeld = new CountDownLatch(1);
     CountDownLatch release = new CountDownLatch(1);
+
     void prepare() {
       bytesHeld = new CountDownLatch(1);
       release = new CountDownLatch(1);
       armed.set(true);
     }
-    public Socket createSocket(String host, int port) throws IOException { return new Socket(host, port); }
-    public OutputStream getOutputStream(Socket socket) throws IOException { return socket.getOutputStream(); }
+
+    public Socket createSocket(String host, int port) throws IOException {
+      return new Socket(host, port);
+    }
+
+    public OutputStream getOutputStream(Socket socket) throws IOException {
+      return socket.getOutputStream();
+    }
+
     public InputStream getInputStream(Socket socket) throws IOException {
       return new FilterInputStream(socket.getInputStream()) {
         public int read(byte[] data, int offset, int length) throws IOException {
@@ -286,7 +325,8 @@ class ChannelLateOpenRekeyTest {
           if (count > 0 && armed.compareAndSet(true, false)) {
             bytesHeld.countDown();
             try {
-              if (!release.await(10, TimeUnit.SECONDS)) throw new IOException("Reply-byte gate was not released");
+              if (!release.await(10, TimeUnit.SECONDS))
+                throw new IOException("Reply-byte gate was not released");
             } catch (InterruptedException e) {
               Thread.currentThread().interrupt();
               throw new IOException(e);
@@ -382,7 +422,8 @@ class ChannelLateOpenRekeyTest {
           @Override
           public Channel createChannel(org.apache.sshd.common.session.Session session)
               throws IOException {
-            if (rejectFirst && rejectionUsed.compareAndSet(false, true)) return null;
+            if (rejectFirst && rejectionUsed.compareAndSet(false, true))
+              return null;
             if (!allocatedStreams.compareAndSet(0, 1)) {
               return null;
             }
@@ -440,6 +481,7 @@ class ChannelLateOpenRekeyTest {
                 keepAliveReceived.countDown();
               super.doHandleMessage(buffer);
             }
+
             @Override
             public IoWriteFuture writePacket(Buffer buffer) throws IOException {
               int message = buffer.rawByte(buffer.rpos()) & 0xff;
@@ -451,7 +493,8 @@ class ChannelLateOpenRekeyTest {
                 renegotiationHeld.countDown();
                 return pending;
               }
-              if (message == ((rejectFirst ? SshConstants.SSH_MSG_CHANNEL_OPEN_FAILURE : SshConstants.SSH_MSG_CHANNEL_OPEN_CONFIRMATION) & 0xff)
+              if (message == ((rejectFirst ? SshConstants.SSH_MSG_CHANNEL_OPEN_FAILURE
+                  : SshConstants.SSH_MSG_CHANNEL_OPEN_CONFIRMATION) & 0xff)
                   && heldReply.get() == null) {
                 PendingWriteFuture candidate = new PendingWriteFuture(this);
                 if (heldReply.compareAndSet(null, candidate)) {
@@ -483,7 +526,8 @@ class ChannelLateOpenRekeyTest {
       ServerSessionImpl current = serverSession.get();
       Buffer marker = current.createBuffer(SshConstants.SSH_MSG_UNIMPLEMENTED, 4);
       marker.putInt(12345);
-      assertTrue(current.writePacket(marker).await(5, TimeUnit.SECONDS), "Reader marker write did not finish");
+      assertTrue(current.writePacket(marker).await(5, TimeUnit.SECONDS),
+          "Reader marker write did not finish");
     }
 
     private void releaseRenegotiation() throws Exception {
@@ -492,8 +536,8 @@ class ChannelLateOpenRekeyTest {
       Buffer replay = current.createBuffer(packet[0], packet.length);
       replay.putRawBytes(packet, 1, packet.length - 1);
       IoWriteFuture actual = current.writePacket(replay);
-      actual.addListener((SshFutureListener<IoWriteFuture>) completed ->
-          heldRenegotiation.get().setValue(completed.isWritten() ? Boolean.TRUE : completed.getException()));
+      actual.addListener((SshFutureListener<IoWriteFuture>) completed -> heldRenegotiation.get()
+          .setValue(completed.isWritten() ? Boolean.TRUE : completed.getException()));
       assertTrue(actual.await(5, TimeUnit.SECONDS), "Peer renegotiation reply did not finish");
       assertTrue(actual.isWritten(), "Peer renegotiation reply was not written");
     }
@@ -519,8 +563,10 @@ class ChannelLateOpenRekeyTest {
       if (!writeCompleted.await(5, TimeUnit.SECONDS)) {
         throw new AssertionError("The delayed open acknowledgement write did not complete");
       }
-      assertTrue(actualWrite.isWritten(), "The delayed open acknowledgement did not reach the peer socket");
-      assertTrue(pending.isWritten(), "The held open acknowledgement did not complete after replay");
+      assertTrue(actualWrite.isWritten(),
+          "The delayed open acknowledgement did not reach the peer socket");
+      assertTrue(pending.isWritten(),
+          "The held open acknowledgement did not complete after replay");
     }
   }
 
@@ -563,7 +609,8 @@ class ChannelLateOpenRekeyTest {
       try {
         output.write(FRESH_RESPONSE);
         output.flush();
-        if (!holdOpen) exitCallback.onExit(0);
+        if (!holdOpen)
+          exitCallback.onExit(0);
       } catch (IOException failure) {
         commandFailure.compareAndSet(null, failure);
         exitCallback.onExit(1, "The peer could not write the test response");
