@@ -103,12 +103,30 @@ public abstract class Channel {
     return recipient;
   }
 
+  synchronized boolean setOpenConfirmation(int peerRecipient, long window, int packetSize) {
+    if (close)
+      return false;
+    setRemoteWindowSize(window);
+    setRemotePacketSize(packetSize);
+    open_confirmation = true;
+    setRecipient(peerRecipient);
+    return true;
+  }
+
   void init() throws JSchException {}
 
   public void connect() throws JSchException {
     connect(0);
   }
 
+  /**
+   * Opens this stream with the given wait budget. A late open acknowledgement after a timeout
+   * releases the allocated peer stream. If no reply arrives, there is no peer recipient available
+   * for cleanup; disconnect the session to release any remaining peer stream.
+   *
+   * @param connectTimeout the open wait budget in milliseconds, or zero for the default wait
+   * @throws JSchException if the stream cannot be opened
+   */
   public void connect(int connectTimeout) throws JSchException {
     this.connectTimeout = connectTimeout;
     try {
@@ -574,11 +592,12 @@ public abstract class Channel {
    * destination, if possible.
    */
 
-  void close() {
+  synchronized void close() {
     if (close)
       return;
     close = true;
     eof_local = eof_remote = true;
+    notifyAll();
 
     int i = getRecipient();
     if (i == -1)
@@ -610,6 +629,7 @@ public abstract class Channel {
 
       synchronized (this) {
         if (!connected) {
+          close();
           return;
         }
         connected = false;
@@ -801,7 +821,7 @@ public abstract class Channel {
     if (timeout != 0L)
       retry = 1;
     synchronized (this) {
-      while (this.getRecipient() == -1 && _session.isConnected() && retry > 0) {
+      while (this.getRecipient() == -1 && !close && _session.isConnected() && retry > 0) {
         if (timeout > 0L) {
           if ((System.currentTimeMillis() - start) > timeout) {
             retry = 0;
@@ -818,16 +838,17 @@ public abstract class Channel {
         }
         retry--;
       }
+      // The final decision and reply publication share this monitor. Once this stream is
+      // closed, a reader that already found it must release the peer recipient instead.
+      if (!_session.isConnected()) {
+        close();
+        throw new JSchException("session is down");
+      }
+      if (close || this.getRecipient() == -1 || !this.open_confirmation) {
+        close();
+        throw new JSchException("channel is not opened.");
+      }
+      connected = true;
     }
-    if (!_session.isConnected()) {
-      throw new JSchException("session is down");
-    }
-    if (this.getRecipient() == -1) { // timeout
-      throw new JSchException("channel is not opened.");
-    }
-    if (this.open_confirmation == false) { // SSH_MSG_CHANNEL_OPEN_FAILURE
-      throw new JSchException("channel is not opened.");
-    }
-    connected = true;
   }
 }
