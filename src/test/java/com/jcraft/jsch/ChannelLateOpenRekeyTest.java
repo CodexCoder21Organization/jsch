@@ -149,7 +149,11 @@ class ChannelLateOpenRekeyTest {
     HeldReplyPeer peer = new HeldReplyPeer();
     SshServer server = peer.server();
     GateSocketFactory sockets = new GateSocketFactory();
-    ExecutorService writer = Executors.newSingleThreadExecutor();
+    ExecutorService writer = Executors.newSingleThreadExecutor(task -> {
+      Thread thread = new Thread(task, "deferred-close-writer");
+      thread.setDaemon(true);
+      return thread;
+    });
     Session session = null;
     try {
       server.start();
@@ -183,6 +187,7 @@ class ChannelLateOpenRekeyTest {
         });
         write.get(5, TimeUnit.SECONDS);
         assertTrue(peer.keepAliveReceived.await(5, TimeUnit.SECONDS), "Peer did not receive next write");
+        assertTrue(peer.streamReleased.await(5, TimeUnit.SECONDS), "Peer did not release the channel");
         assertEquals(round + 1, peer.receivedCloseCount.get(), "Deferred close count changed");
         assertEquals(1, java.util.Collections.frequency(peer.closeRecipients, recipient),
             "Peer recipient did not receive exactly one close");
@@ -320,6 +325,7 @@ class ChannelLateOpenRekeyTest {
     private final AtomicBoolean holdRenegotiation = new AtomicBoolean();
     private CountDownLatch renegotiationHeld = new CountDownLatch(1);
     private CountDownLatch keepAliveReceived = new CountDownLatch(1);
+    private CountDownLatch streamReleased = new CountDownLatch(1);
     private final AtomicReference<PendingWriteFuture> heldRenegotiation = new AtomicReference<>();
     private final AtomicReference<byte[]> renegotiationPacket = new AtomicReference<>();
     private final AtomicReference<Channel> latestChannel = new AtomicReference<>();
@@ -399,6 +405,7 @@ class ChannelLateOpenRekeyTest {
               @Override
               public void channelClosed(Channel closed, Throwable reason) {
                 allocatedStreams.decrementAndGet();
+                streamReleased.countDown();
                 if (closed == firstChannel.get()) {
                   firstStreamClosed.countDown();
                 }
@@ -469,6 +476,7 @@ class ChannelLateOpenRekeyTest {
       openReplyHeld = new CountDownLatch(1);
       renegotiationHeld = new CountDownLatch(1);
       keepAliveReceived = new CountDownLatch(1);
+      streamReleased = new CountDownLatch(1);
     }
 
     private void sendReaderMarker() throws Exception {
