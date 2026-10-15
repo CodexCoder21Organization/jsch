@@ -1,0 +1,37 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Sign in — kompile-remote-build</title>
+      <link rel="stylesheet" href="/static/styles.css">
+    </head>
+    <body>
+      <header class="topbar">
+        <div class="brand"><a href="/">kompile-remote-build</a></div>
+        <nav>
+          <a href="/">Repositories</a>
+          <a href="/droplets">Droplet sizes</a>
+          <a href="/queue">Queue</a>
+          <a href="https://perftest.kotlin.build/">Performance tests ↗</a>
+          <a href="/health">Health</a>
+        </nav>
+        <div class="user"></div>
+      </header>
+      <main>
+    <div class="login-card">
+      <h1>kompile-remote-build</h1>
+      <p>Build analytics over the kotlin.build buildtest data.</p>
+      
+      <form method="POST" action="/login">
+        <label for="who">Identifier</label>
+        <input id="who" name="who" type="text" placeholder="your-name" required autofocus />
+        <button type="submit">Sign in</button>
+      </form>
+      <p class="hint">v1 mock authentication — W3Wallet enforcement is planned for v2. Any non-empty identifier is accepted.</p>
+    </div>
+</main>
+      <footer><span>kompile-remote-build · v1 · powered by <a href="https://buildtest.kotlin.build">buildtest.kotlin.build</a></span></footer>
+      <script src="/static/timestamps.js" defer></script>
+    </body>
+    </html>
