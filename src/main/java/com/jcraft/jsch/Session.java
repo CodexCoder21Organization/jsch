@@ -35,11 +35,13 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Enumeration;
+import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Properties;
+import java.util.Set;
 import java.util.Vector;
 import javax.crypto.AEADBadTagException;
 
@@ -689,6 +691,7 @@ public class Session {
 
   // The outgoing packet lock owns these recipients and their terminal state.
   private final ArrayDeque<Integer> pendingChannelCloses = new ArrayDeque<>();
+  private final Set<Integer> pendingChannelOpenReplies = new HashSet<>();
   private boolean channelClosesClosed = false;
 
   private volatile boolean in_kex = false;
@@ -1503,6 +1506,18 @@ public class Session {
     }
   }
 
+  private boolean consumeChannelOpenReply(int id, String message) {
+    synchronized (lock) {
+      if (pendingChannelOpenReplies.remove(id))
+        return true;
+    }
+    if (getLogger().isEnabled(Logger.INFO)) {
+      getLogger().log(Logger.INFO,
+          "Ignoring " + message + " for channel " + id + ": no pending open reply");
+    }
+    return false;
+  }
+
   private void closeLateChannel(int recipient) throws Exception {
     synchronized (lock) {
       if (channelClosesClosed || !isConnected)
@@ -1793,8 +1808,19 @@ public class Session {
     synchronized (lock) {
       if (receiveCreditOwner != null && (receiveCreditOwner.close || !receiveCreditOwner.connected))
         return;
+      Integer openId = null;
+      if (packet.buffer.getCommand() == SSH_MSG_CHANNEL_OPEN) {
+        // Read before encoding changes the packet, without changing the caller's cursor.
+        Buffer open = new Buffer(packet.buffer.buffer);
+        open.setOffSet(6);
+        open.getByte(open.getInt()); // channel type
+        openId = open.getInt();
+      }
       encode(packet);
       if (io != null) {
+        // Publish before sending: the reader may receive the reply as soon as put returns.
+        if (openId != null && !channelClosesClosed)
+          pendingChannelOpenReplies.add(openId);
         io.put(packet);
         if (++seqo == 0 && (enable_strict_kex || require_strict_kex) && initialKex) {
           throw new JSchStrictKexException("outgoing sequence number wrapped during initial KEX");
@@ -1964,6 +1990,8 @@ public class Session {
             buf.getInt();
             buf.getShort();
             i = buf.getInt();
+            if (!consumeChannelOpenReply(i, "SSH_MSG_CHANNEL_OPEN_CONFIRMATION"))
+              break;
             channel = Channel.getChannel(i, this);
             int r = buf.getInt();
             long rws = buf.getUInt();
@@ -1977,6 +2005,8 @@ public class Session {
             buf.getInt();
             buf.getShort();
             i = buf.getInt();
+            if (!consumeChannelOpenReply(i, "SSH_MSG_CHANNEL_OPEN_FAILURE"))
+              break;
             channel = Channel.getChannel(i, this);
             if (channel != null) {
               int reason_code = buf.getInt();
@@ -2117,6 +2147,7 @@ public class Session {
     synchronized (lock) {
       channelClosesClosed = true;
       pendingChannelCloses.clear();
+      pendingChannelOpenReplies.clear();
     }
     // System.err.println(this+": disconnect");
     // Thread.dumpStack();
