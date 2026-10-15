@@ -1,0 +1,31 @@
+{
+  "source_head": "7a7f397cff5006cd3373940b8b004ed80560dd29",
+  "release_head": "74923e5073b553e9512029e01ab19ee311b1abe2",
+  "source_java_test_pom_identical_to_suite_product": true,
+  "protected_files": {
+    "ChannelLateOpenTest.java": {
+      "sha256": "eb523698b133d41a85650bab5650a7da18e282ce3c5d6b0720199f98689835d5",
+      "same_as_baseline_and_release": true
+    },
+    "ChannelLateOpenRekeyTest.java": {
+      "sha256": "39bbbd85799c59c241935de8944ab5bc36c44ca801affc91a545f1a01fdfb8ad",
+      "same_as_baseline_and_release": true
+    },
+    "PendingCloseBoundTest.java": {
+      "sha256": "f7a5c2bb5c488e9277e072df89a2a832270a25012a511b91d4caa129b1ecf88b",
+      "same_as_baseline_and_release": true
+    }
+  },
+  "source_changed_paths": [
+    "Readme.md",
+    "src/main/java/com/jcraft/jsch/Session.java",
+    "src/test/java/com/jcraft/jsch/FailedOpenReplyTest.java"
+  ],
+  "release_changed_paths": [
+    "Readme.md",
+    "pom.xml",
+    "src/main/java/com/jcraft/jsch/Session.java",
+    "src/test/java/com/jcraft/jsch/FailedOpenReplyTest.java"
+  ],
+  "working_trees_clean": true
+}
