@@ -76,7 +76,10 @@ class PendingCloseBoundTest {
     }
 
     void resumeProposal() throws Exception {
-      super.doHandleMessage(new ByteArrayBuffer(proposal));
+      // Resume under the same guard and handler context as normal peer decoding.
+      synchronized (decodeLock) {
+        super.handleMessage(new ByteArrayBuffer(proposal));
+      }
     }
   }
 
