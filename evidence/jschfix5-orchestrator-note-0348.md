@@ -1,0 +1,2 @@
+# ORCHESTRATOR-NOTE 03:48 UTC — do not wait for the kotlin.build (kompile-remote-build) check
+That check is informational and fleet-wide unreliable (it is not a required check in any of these repositories; red or absent does not block merging). The required gate is kotlin.build (remote), which is green on 48ad5294. Do not re-request suites for it and do not wait on it. Finish now: confirm reader5 publication URLs/checksums, the PR description, process cleanup, and emit your READY line with the suite counts.
