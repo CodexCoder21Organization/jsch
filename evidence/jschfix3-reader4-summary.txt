@@ -1,0 +1,22 @@
+{"errors": 0, "failures": 0, "files": 21, "retry_records": 0, "rows": 227, "skipped": 0}
+connectionEndDiscardsDeferredClose 1.059 PASS
+connectionEndDiscardsDeferredClose 1.053 PASS
+connectionEndDiscardsDeferredClose 1.075 PASS
+lateOpenFailureSendsNoClose 1.108 PASS
+lateOpenFailureSendsNoClose 1.108 PASS
+lateOpenFailureSendsNoClose 1.097 PASS
+deferredCloseIsSentOnceAcrossConsecutiveRenegotiations 2.261 PASS
+deferredCloseIsSentOnceAcrossConsecutiveRenegotiations 2.255 PASS
+deferredCloseIsSentOnceAcrossConsecutiveRenegotiations 2.287 PASS
+inFlightLateConfirmationMustNotBlockRekey 1.163 PASS
+inFlightLateConfirmationMustNotBlockRekey 1.121 PASS
+inFlightLateConfirmationMustNotBlockRekey 1.145 PASS
+lateOpenAcknowledgementReleasesAllocatedStream 5.092 PASS
+lateOpenAcknowledgementReleasesAllocatedStream 1.459 PASS
+lateOpenAcknowledgementReleasesAllocatedStream 1.323 PASS
+sessionCloseReleasesStreamWhenOpenReplyDoesNotArrive 1.152 PASS
+sessionCloseReleasesStreamWhenOpenReplyDoesNotArrive 1.139 PASS
+sessionCloseReleasesStreamWhenOpenReplyDoesNotArrive 1.171 PASS
+disconnectWhileOpenReplyIsHeldReleasesAllocatedStream 0.205 PASS
+disconnectWhileOpenReplyIsHeldReleasesAllocatedStream 0.1 PASS
+disconnectWhileOpenReplyIsHeldReleasesAllocatedStream 0.119 PASS

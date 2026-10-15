@@ -1,0 +1,18 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.github.mwiede:jsch >-----------------------
+[INFO] Building JSch 0.2.18-reader4
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- formatter:2.29.0:format (default-cli) @ jsch ---
+[INFO] Processed 2 files in 6s730ms (Formatted: 0, Skipped: 0, Unchanged: 2, Failed: 0, Readonly: 0)
+[INFO] 
+[INFO] --- impsort:1.13.0:sort (default-cli) @ jsch ---
+[INFO] Processed 2 files in 00:02.752 (Already Sorted: 2, Needed Sorting: 0)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  12.311 s
+[INFO] Finished at: 2026-10-15T01:40:04Z
+[INFO] ------------------------------------------------------------------------

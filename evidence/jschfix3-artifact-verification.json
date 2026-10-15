@@ -1,0 +1,26 @@
+{
+  "coordinates": "com.github.mwiede:jsch:0.2.18-reader4",
+  "release_source_head": "039816edbddec37610c1223524c4337a81a9a433",
+  "pr_source_head": "b531bee708c94c7be7ce40942225393885482eb5",
+  "checked_in_sources_matched": 285,
+  "base_class_major": 52,
+  "dependencies_identical_to_reader3": true,
+  "files": {
+    "jsch-0.2.18-reader4-javadoc.jar": {
+      "bytes": 510622,
+      "sha256": "b4db5648ce814af658187cf558ef539870bb5613bac7a53fafe14911f9b51234"
+    },
+    "jsch-0.2.18-reader4-sources.jar": {
+      "bytes": 530651,
+      "sha256": "63def35f0b95a5142ed2cc25dd42001f3c851b8108a6053ff925a10ae1a0c994"
+    },
+    "jsch-0.2.18-reader4.jar": {
+      "bytes": 550380,
+      "sha256": "dcff7548fdfed37897e8af0077d8045e11b7bdaea8c199d76d306ce2670c123e"
+    },
+    "jsch-0.2.18-reader4.pom": {
+      "bytes": 2111,
+      "sha256": "69c847836d58e43a4983cb72563c669c5a436f306c23f814b7f8ab36c4f7ffe8"
+    }
+  }
+}

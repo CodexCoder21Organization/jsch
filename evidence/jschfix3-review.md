@@ -26,3 +26,13 @@ OBSERVED: This was a read-only review. I ran no build or tests and edited no rep
 ## Follow-up cleanup check
 
 OBSERVED: The current worktree wraps the bounded writer termination assertion in `try/finally` and calls `server.stop(true)` from that `finally` (`ChannelLateOpenRekeyTest.java:202-206`). If the assertion fails, server shutdown still runs. This resolves the remaining cleanup concern recorded above. I verified the diff and lines only; no build or test was run.
+
+## Reader4 source review
+
+Review target: `wip/jschfix3-reader4` at base `1c05727`, compared with the corrected helper flow in `21d416b`.
+
+- OBSERVED: The current diff contains `Readme.md`, `pom.xml`, and `Session.java`; it does not change either test file. The POM changes only the version from `0.2.18-reader3` to `0.2.18-reader4`. The README adds the renegotiation wait and disconnect behavior to the existing stream-open cleanup description.
+- OBSERVED: `Session.java` changes are limited to the intended recipient queue and terminal flag, queue initialization on connect, synchronized renegotiation start and completion, routing late confirmations through the queue helper, and clearing the queue on disconnect. The queue helpers and their lock use match `21d416b` semantically. The older reader3 code's `Channel.getChannel(i, this)` lookup remains unchanged; the new close route uses the recipient parsed from the confirmation, as the corrected master version does.
+- OBSERVED: The same `lock` protects rekey state and queue state. Queue draining uses `_write` while holding that monitor, matching the master correction; `_write` uses the same Java monitor, which is reentrant. I found no additional lock-order or recipient-ownership issue in this diff.
+- OBSERVED: `ChannelLateOpenRekeyTest.java` is byte-identical to `b531bee`; `ChannelLateOpenTest.java` is byte-identical to `1c05727` (`git diff --quiet` returned 0 for both comparisons). No test change was introduced by this source-porting step.
+- OBSERVED: This was read-only review. No build or test was run, and no repository file was edited.
