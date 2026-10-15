@@ -31,6 +31,7 @@ import java.io.InputStream;
 import java.io.InterruptedIOException;
 import java.io.OutputStream;
 import java.net.Socket;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Enumeration;
@@ -251,7 +252,10 @@ public class Session {
         socket.setSoTimeout(connectTimeout);
       }
 
-      isConnected = true;
+      synchronized (lock) {
+        channelClosesClosed = false;
+        isConnected = true;
+      }
 
       if (getLogger().isEnabled(Logger.INFO)) {
         getLogger().log(Logger.INFO, "Connection established");
@@ -683,6 +687,10 @@ public class Session {
     return false;
   }
 
+  // The outgoing packet lock owns these recipients and their terminal state.
+  private final ArrayDeque<Integer> pendingChannelCloses = new ArrayDeque<>();
+  private boolean channelClosesClosed = false;
+
   private volatile boolean in_kex = false;
   private volatile boolean in_prompt = false;
   private volatile String[] not_available_shks = null;
@@ -843,8 +851,12 @@ public class Session {
       }
     }
 
-    in_kex = true;
-    kex_start_time = System.currentTimeMillis();
+    synchronized (lock) {
+      if (in_kex)
+        return;
+      kex_start_time = System.currentTimeMillis();
+      in_kex = true;
+    }
 
     // byte SSH_MSG_KEXINIT(20)
     // byte[16] cookie (random bytes)
@@ -1465,13 +1477,38 @@ public class Session {
     } finally {
       kex.clearK();
     }
-    in_kex = false;
     if (doStrictKex) {
       seqi = 0;
       if (getLogger().isEnabled(Logger.INFO)) {
         getLogger().log(Logger.INFO,
             "Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX");
       }
+    }
+    synchronized (lock) {
+      in_kex = false;
+      flushPendingChannelCloses();
+    }
+  }
+
+  // Called with lock held. Never enter write's rekey wait from the reader.
+  private void flushPendingChannelCloses() throws Exception {
+    while (!in_kex && !channelClosesClosed && isConnected && !pendingChannelCloses.isEmpty()) {
+      int recipient = pendingChannelCloses.removeFirst();
+      Buffer closeBuffer = new Buffer(100);
+      Packet closePacket = new Packet(closeBuffer);
+      closePacket.reset();
+      closeBuffer.putByte((byte) SSH_MSG_CHANNEL_CLOSE);
+      closeBuffer.putInt(recipient);
+      _write(closePacket);
+    }
+  }
+
+  private void closeLateChannel(int recipient) throws Exception {
+    synchronized (lock) {
+      if (channelClosesClosed || !isConnected)
+        return;
+      pendingChannelCloses.addLast(recipient);
+      flushPendingChannelCloses();
     }
   }
 
@@ -1933,10 +1970,7 @@ public class Session {
             int rps = buf.getInt();
             if (channel == null || !channel.setOpenConfirmation(r, rws, rps)) {
               // The late reply identifies the allocated peer stream even after local removal.
-              packet.reset();
-              buf.putByte((byte) SSH_MSG_CHANNEL_CLOSE);
-              buf.putInt(r);
-              write(packet);
+              closeLateChannel(r);
             }
             break;
           case SSH_MSG_CHANNEL_OPEN_FAILURE:
@@ -2080,6 +2114,10 @@ public class Session {
   public void disconnect() {
     if (!isConnected)
       return;
+    synchronized (lock) {
+      channelClosesClosed = true;
+      pendingChannelCloses.clear();
+    }
     // System.err.println(this+": disconnect");
     // Thread.dumpStack();
     if (getLogger().isEnabled(Logger.INFO)) {

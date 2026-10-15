@@ -142,7 +142,9 @@ Disconnecting a channel or session locally releases pending data and wakes waiti
 ## Stream open cleanup
 
 If `Channel.connect(timeout)` times out, a later open acknowledgement releases the
-allocated peer stream with a close message. Disconnecting a pending stream also ends
+allocated peer stream with a close message. During renegotiation, that close waits
+in the session until renegotiation completes, so the reader can continue processing
+the exchange. Session disconnect discards any waiting closes. Disconnecting a pending stream also ends
 its local open call, and a later acknowledgement releases the peer allocation.
 If the peer never sends a reply, the client has no peer stream identifier to address;
 call `Session.disconnect()` to release the peer's remaining streams.
