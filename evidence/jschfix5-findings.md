@@ -266,3 +266,20 @@ Completed source: https://github.com/CodexCoder21Organization/jsch/pull/3 OPEN a
 Published build: com.github.mwiede:jsch:0.2.18-reader5. All four public artifact URLs and SHA-256 values are in jschfix5-publication-verification.json. It is published but not merged into master. Master525/525, release233/233, final targeted6/6, preserved21/21; all first attempts with no errors/skips/retries. Final old-product reversal6/6 intended failures. Peer fixture overlap fixed and independently reviewed; diagnostic baseline90/100 vs corrected100/100. Preserve lifecycle/rekey files exactly; lifecycle hash eb523698b133d41a85650bab5650a7da18e282ce3c5d6b0720199f98689835d5. Formatting complaint unchanged, no validator exclusions. Channel-id reassignment after 2^31 remains the expressly excluded follow-up.
 Only remaining requested gate: a genuine kotlin.build(kompile-remote-build) check on exact48ad5294, then final verification. kotlin.build(remote) is successful. Current receiver confirms both routes enabled and received the relevant deliveries; the secondary check is absent. No further re-request has been made after the single diagnostic recovery request, which reproduced the same absence. The infrastructure owner needs the dispatcher experiment described above. Do not manufacture a success check, merge, deploy, or re-run tests for green.
 Handoff service is excluded by this lane's common instructions; this record and remote evidence are the durable handoff for the orchestrator. Source checkouts and native XML stay available; generated target/package/probe-class directories were removed.
+
+2026-10-15 03:48 UTC — OBSERVED: Cleanup complete. Exact ps -eo pid,args -ww saved locally; owned-process/slot audit finds zero owned background processes and zero owned build slots. Working tree clean; release worktree and generated target/package/probe-class directories removed; compile caches retained. No loop is scheduled and both reviewer turns finished. The full global process listing is deliberately kept local; only the owned-process verification is archived.
+
+## Brief audit
+| Requested item | State and proof |
+|---|---|
+| At most one expected reply and one close notice per abandoned open | DONE:31-line Session correction; repeated replies3/3 first-attempt passes, exact1 notice; old-product reversal3/3 exact513 failures |
+| Unknown/repeated reply drop without reader stop | DONE:512 repeated replies and unknown id during held exchange; ordered reader markers and following write; failure-then-confirmation3/3 expects0, old product3/3 exact1 failures |
+| Existing named tests byte-identical/run once | DONE:protected lifecycle9 and rekey12 rows passed once on byte-identical product, both test files retain original bytes; final full suites also pass |
+| Full master/release once | DONE:525/525 and233/233, all519/227 predecessor rows retained plus6 new rows, zero errors/skips/retries |
+| Publish reader5 / public URLs/checksums | DONE:publisher0.0.6 exit0 after404 POM probe,4 public200 files matchSHA256;285 sources and Java8 base validated, reader4 dependencies/receive behavior retained |
+| PR update and checkpoints | DONE:OPEN at tested48ad5294; exact description readback, original lifecycle-hash line preserved, master/release/evidence branches pushed |
+| Finding2 remains follow-up | DONE:31-bit id-reassignment issue recorded with separate allocator proof requirement; no allocator change or runtime wrap claim |
+| Inherited formatter constraint | DONE per brief:protected file unchanged; global validation invoked without exclusions and complaint recorded; changed files and401 imports validated |
+| Fix other observed flake | DONE:peer replay serializer corrected after10/100 baseline failures; same diagnostic100/100 passes; independent source/test review resolution |
+| Requested two-check CI gate | NOT YET MET:primary success, secondary absent despite enabled route and received deliveries; concrete CI/monitor follow-up briefs above |
+| No merge / cleanup | DONE:no merge/enqueue/deploy; no owned processes/slots, generated directories removed, clean checkout |
