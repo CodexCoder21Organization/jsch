@@ -151,5 +151,11 @@ its local open call, and a later acknowledgement releases the peer allocation.
 If the peer never sends a reply, the client has no peer stream identifier to address;
 call `Session.disconnect()` to release the peer's remaining streams.
 
+A peer's explicit open refusal throws `JSchChannelOpenException`, a `JSchException`
+subclass retaining the existing message and the peer's reason through `getReasonCode()`.
+A missing reply or local cancellation does not throw that subtype. All unsuccessful opens
+are locally terminal, so `Channel.isClosed()` alone does not identify a peer refusal.
+The uint32 reason is represented as a Java `int`, including negative values.
+
 ## Changes since fork:
 See [ChangeLog.md](ChangeLog.md)

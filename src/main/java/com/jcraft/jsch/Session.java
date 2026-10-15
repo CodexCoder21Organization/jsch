@@ -2161,10 +2161,7 @@ public class Session {
               int reason_code = buf.getInt();
               // foo=buf.getString(); // additional textual information
               // foo=buf.getString(); // language tag
-              channel.setExitStatus(reason_code);
-              channel.close = true;
-              channel.eof_remote = true;
-              channel.setRecipient(0);
+              channel.setOpenFailure(reason_code);
             }
             break;
           case SSH_MSG_CHANNEL_REQUEST:
