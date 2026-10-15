@@ -144,7 +144,9 @@ If `Channel.connect(timeout)` times out, a later open acknowledgement releases t
 allocated peer stream with a close message. During key exchange, that close waits
 in the session until the new keys are ready, so the reader can continue processing
 the exchange. Session disconnect discards any waiting closes. Each open request accepts one reply;
-repeated replies and replies without a pending open are ignored. Disconnecting a pending stream also ends
+repeated replies and replies without a pending open are ignored. If an outgoing open write fails,
+its expected reply is discarded under the packet lock. Any later reply is ignored, including when
+the write failed after sending some or all of the request bytes. Disconnecting a pending stream also ends
 its local open call, and a later acknowledgement releases the peer allocation.
 If the peer never sends a reply, the client has no peer stream identifier to address;
 call `Session.disconnect()` to release the peer's remaining streams.

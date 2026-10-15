@@ -1,6 +1,7 @@
 package com.jcraft.jsch;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.io.*;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
@@ -9,15 +10,15 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import org.apache.sshd.common.SshConstants;
+import org.apache.sshd.common.io.IoSession;
+import org.apache.sshd.common.io.IoWriteFuture;
 import org.apache.sshd.common.util.buffer.Buffer;
 import org.apache.sshd.server.SshServer;
 import org.apache.sshd.server.keyprovider.SimpleGeneratorHostKeyProvider;
 import org.apache.sshd.server.session.ServerSession;
-import org.junit.jupiter.api.RepeatedTest;
-import org.apache.sshd.common.io.IoSession;
-import org.apache.sshd.common.io.IoWriteFuture;
 import org.apache.sshd.server.session.ServerSessionImpl;
 import org.apache.sshd.server.session.SessionFactory;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Timeout;
 
 public class FailedOpenReplyTest {
@@ -74,35 +75,45 @@ public class FailedOpenReplyTest {
         public Socket createSocket(String host, int port) throws IOException {
           return new Socket(host, port);
         }
+
         public InputStream getInputStream(Socket socket) throws IOException {
           return socket.getInputStream();
         }
+
         public OutputStream getOutputStream(Socket socket) throws IOException {
           return new FilterOutputStream(socket.getOutputStream()) {
             public void write(byte[] bytes, int offset, int length) throws IOException {
               if (rejectWrites.get() && mode != 2) {
-                if (mode == 1) out.write(bytes, offset, 1);
+                if (mode == 1)
+                  out.write(bytes, offset, 1);
                 throw new IOException("test outgoing open write failed in mode " + mode);
               }
               out.write(bytes, offset, length);
             }
+
             public void flush() throws IOException {
               out.flush();
               if (rejectWrites.get() && mode == 2)
                 throw new IOException("test outgoing open write failed in mode " + mode);
             }
+
             public void write(int value) throws IOException {
-              if (rejectWrites.get()) throw new IOException("test outgoing open write failed in mode " + mode);
+              if (rejectWrites.get())
+                throw new IOException("test outgoing open write failed in mode " + mode);
               out.write(value);
             }
           };
         }
       });
       session.setLogger(new Logger() {
-        public boolean isEnabled(int level) { return true; }
+        public boolean isEnabled(int level) {
+          return true;
+        }
+
         public void log(int level, String message) {
           diagnostics.add(message);
-          if (message.equals("Received SSH_MSG_UNIMPLEMENTED for 22222")) markerRead.countDown();
+          if (message.equals("Received SSH_MSG_UNIMPLEMENTED for 22222"))
+            markerRead.countDown();
         }
       });
       session.connect(10000);
@@ -112,7 +123,8 @@ public class FailedOpenReplyTest {
         Channel channel = session.openChannel("exec");
         failedIds.add(channel.getId());
         JSchException failure = assertThrows(JSchException.class, () -> channel.connect(1000));
-        assertEquals("java.io.IOException: test outgoing open write failed in mode " + mode, failure.getMessage());
+        assertEquals("java.io.IOException: test outgoing open write failed in mode " + mode,
+            failure.getMessage());
         assertTrue(channel.isClosed());
         assertTrue(session.isConnected());
       }
@@ -135,14 +147,20 @@ public class FailedOpenReplyTest {
       assertTrue(markerRead.await(5, TimeUnit.SECONDS));
       assertTrue(session.isConnected());
       String suffix = ": no pending open reply";
-      assertTrue(diagnostics.contains("Ignoring SSH_MSG_CHANNEL_OPEN_FAILURE for channel " + Integer.MAX_VALUE + suffix));
-      long droppedFailed = failedIds.stream().filter(id -> diagnostics.contains(
-          "Ignoring SSH_MSG_CHANNEL_OPEN_FAILURE for channel " + id + suffix)).count();
-      System.out.println("OBSERVED failed writes=" + failedIds.size() + " still connected=" + session.isConnected()
-          + " failed-open replies dropped=" + droppedFailed + " unknown-id control dropped=true");
-      assertEquals(count, droppedFailed, "A failed outgoing open must not remain an expected reply");
+      assertTrue(diagnostics.contains(
+          "Ignoring SSH_MSG_CHANNEL_OPEN_FAILURE for channel " + Integer.MAX_VALUE + suffix));
+      long droppedFailed = failedIds.stream()
+          .filter(id -> diagnostics
+              .contains("Ignoring SSH_MSG_CHANNEL_OPEN_FAILURE for channel " + id + suffix))
+          .count();
+      System.out.println("OBSERVED failed writes=" + failedIds.size() + " still connected="
+          + session.isConnected() + " failed-open replies dropped=" + droppedFailed
+          + " unknown-id control dropped=true");
+      assertEquals(count, droppedFailed,
+          "A failed outgoing open must not remain an expected reply");
     } finally {
-      if (session != null) session.disconnect();
+      if (session != null)
+        session.disconnect();
       server.stop(true);
     }
   }

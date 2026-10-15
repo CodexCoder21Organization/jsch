@@ -1943,7 +1943,15 @@ public class Session {
         // Publish before sending: the reader may receive the reply as soon as put returns.
         if (openId != null && !channelClosesClosed)
           pendingChannelOpenReplies.add(openId);
-        io.put(packet);
+        boolean sent = false;
+        try {
+          io.put(packet);
+          sent = true;
+        } finally {
+          // A failed write ends this open attempt, including any later reply for it.
+          if (!sent && openId != null)
+            pendingChannelOpenReplies.remove(openId);
+        }
         if (++seqo == 0 && (enable_strict_kex || require_strict_kex) && initialKex) {
           throw new JSchStrictKexException("outgoing sequence number wrapped during initial KEX");
         }
