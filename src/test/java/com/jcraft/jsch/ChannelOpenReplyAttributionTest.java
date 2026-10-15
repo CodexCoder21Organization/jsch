@@ -96,14 +96,22 @@ class ChannelOpenReplyAttributionTest {
         });
         session.connect(10000);
         // Serial calls impose abandonment before a retry uses the same session.
+        Channel abandonedChannel = null;
         for (int attempt = 0; attempt < 2; attempt++) {
           Channel channel = session.openChannel("exec");
+          if (attempt == 0)
+            abandonedChannel = channel;
           JSchException failure = assertThrows(JSchException.class, () -> channel.connect(1000));
           assertEquals("com.jcraft.jsch.JSchException: channel is not opened.", failure.toString());
           assertEquals(-1, channel.getExitStatus(), "The old reply must not supply a retry reason");
           channel.disconnect();
         }
         assertTrue(lateReplyRead.await(5, TimeUnit.SECONDS), "Reader must process the late reply before verdict");
+        assertNotNull(abandonedChannel);
+        assertTrue(abandonedChannel.isClosed());
+        assertFalse(abandonedChannel.isConnected());
+        assertEquals(-1, abandonedChannel.getExitStatus(),
+            "The late reply must not change the abandoned caller's outcome");
         assertEquals(2, opens.get());
         assertTrue(session.isConnected());
       } finally {
