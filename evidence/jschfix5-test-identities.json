@@ -1,0 +1,14 @@
+{
+  "ChannelLateOpenTest.java": {
+    "sha256": "eb523698b133d41a85650bab5650a7da18e282ce3c5d6b0720199f98689835d5",
+    "master_release_identical": true
+  },
+  "ChannelLateOpenRekeyTest.java": {
+    "sha256": "39bbbd85799c59c241935de8944ab5bc36c44ca801affc91a545f1a01fdfb8ad",
+    "master_release_identical": true
+  },
+  "PendingCloseBoundTest.java": {
+    "sha256": "f7a5c2bb5c488e9277e072df89a2a832270a25012a511b91d4caa129b1ecf88b",
+    "master_release_identical": true
+  }
+}

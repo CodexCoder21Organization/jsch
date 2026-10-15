@@ -1,0 +1,27 @@
+{
+  "coordinates": "com.github.mwiede:jsch:0.2.18-reader5",
+  "release_source_head": "ae0fffafae970cd1abe760ec8c4d8b5bc6ebfe13",
+  "pr_source_head": "48ad529432ac01a78c9c3a712be072a4e46b1c8c",
+  "checked_in_sources_matched": 285,
+  "base_class_major": 52,
+  "dependencies_identical_to_reader4": true,
+  "files": {
+    "jsch-0.2.18-reader5-javadoc.jar": {
+      "bytes": 510619,
+      "sha256": "fa546c31d7dff5995172a37bfef1719ddb0e4b654eae2b8802b60674a1be1832"
+    },
+    "jsch-0.2.18-reader5-sources.jar": {
+      "bytes": 530992,
+      "sha256": "1b70afeae4578c7f0283d1ad8f85a9b5e7d45cef50bc3e46469f60d1ba38ba06"
+    },
+    "jsch-0.2.18-reader5.jar": {
+      "bytes": 550793,
+      "sha256": "43f7d729cce8b48398002affe3dd0b360460fa0fde9115807686257cd3e88cb2"
+    },
+    "jsch-0.2.18-reader5.pom": {
+      "bytes": 2111,
+      "sha256": "1dc5f4702e718d32d15551b45659056c8caf7c26ae4d0b2e844c8549ae740289"
+    }
+  },
+  "no_test_peer_dependency_classes": true
+}

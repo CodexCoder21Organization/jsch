@@ -79,3 +79,84 @@
 [INFO] Running com.jcraft.jsch.jzlib.DeflaterInflaterStreamTest
 [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.496 s -- in com.jcraft.jsch.jzlib.DeflaterInflaterStreamTest
 [INFO] Running com.jcraft.jsch.jzlib.DeflateInflateTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.74 s -- in com.jcraft.jsch.jzlib.DeflateInflateTest
+[INFO] Running com.jcraft.jsch.Slf4jLoggerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in com.jcraft.jsch.Slf4jLoggerTest
+[INFO] Running com.jcraft.jsch.KnownHostsTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.080 s -- in com.jcraft.jsch.KnownHostsTest
+[INFO] Running com.jcraft.jsch.PendingCloseBoundTest
+OBSERVED pending late replies processed without completing exchange=256
+OBSERVED pending late replies processed without completing exchange=512
+OBSERVED close notices for one abandoned recipient=0 count=1
+OBSERVED pending late replies processed without completing exchange=256
+OBSERVED pending late replies processed without completing exchange=512
+OBSERVED close notices for one abandoned recipient=0 count=1
+OBSERVED pending late replies processed without completing exchange=256
+OBSERVED pending late replies processed without completing exchange=512
+OBSERVED close notices for one abandoned recipient=0 count=1
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.327 s -- in com.jcraft.jsch.PendingCloseBoundTest
+[INFO] Running com.jcraft.jsch.ChannelInputStreamFlowControlTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.92 s -- in com.jcraft.jsch.ChannelInputStreamFlowControlTest
+[INFO] Running com.jcraft.jsch.JulLoggerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in com.jcraft.jsch.JulLoggerTest
+[INFO] Running com.jcraft.jsch.SessionTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.119 s -- in com.jcraft.jsch.SessionTest
+[INFO] Running com.jcraft.jsch.KeyExchangeTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 190.6 s -- in com.jcraft.jsch.KeyExchangeTest
+[INFO] Running com.jcraft.jsch.ChannelLateOpenRekeyTest
+TRACE: late OPEN_FAILURE processed; fresh exec complete; client CLOSE count=0
+TRACE: late OPEN_FAILURE processed; fresh exec complete; client CLOSE count=0
+TRACE: late OPEN_FAILURE processed; fresh exec complete; client CLOSE count=0
+TRACE: late confirmation written before client rekey; client rekey returned; releasing confirmation bytes
+TRACE: rekeyWriterCompleted=true peerClosed=true sessionConnected=true
+TRACE: late confirmation written before client rekey; client rekey returned; releasing confirmation bytes
+TRACE: rekeyWriterCompleted=true peerClosed=true sessionConnected=true
+TRACE: late confirmation written before client rekey; client rekey returned; releasing confirmation bytes
+TRACE: rekeyWriterCompleted=true peerClosed=true sessionConnected=true
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.68 s -- in com.jcraft.jsch.ChannelLateOpenRekeyTest
+[INFO] Running com.jcraft.jsch.KeyPairTest
+[INFO] Tests run: 85, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.721 s -- in com.jcraft.jsch.KeyPairTest
+[INFO] Running com.jcraft.jsch.KeyPair2Test
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.200 s -- in com.jcraft.jsch.KeyPair2Test
+[INFO] Running com.jcraft.jsch.SftpATTRSTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.291 s -- in com.jcraft.jsch.SftpATTRSTest
+[INFO] Running com.jcraft.jsch.OpenSSHConfigTest
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.180 s -- in com.jcraft.jsch.OpenSSHConfigTest
+[INFO] Running com.jcraft.jsch.LoggerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in com.jcraft.jsch.LoggerTest
+[INFO] Running com.jcraft.jsch.Log4j2LoggerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.972 s -- in com.jcraft.jsch.Log4j2LoggerTest
+[INFO] Running com.jcraft.jsch.JSchTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s -- in com.jcraft.jsch.JSchTest
+[INFO] Running com.jcraft.jsch.jbcrypt.BCryptTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.50 s -- in com.jcraft.jsch.jbcrypt.BCryptTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 233, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ jsch ---
+[INFO] Building jar: /home/u/lanes/util20261014/workspace/jschfix5/release/target/jsch-0.2.18-reader5.jar
+[INFO] 
+[INFO] --- assembly:3.7.1:single (attach-sources) @ jsch ---
+[INFO] Reading assembly descriptor: /home/u/lanes/util20261014/workspace/jschfix5/release/src/assembly/sources.xml
+[INFO] Building jar: /home/u/lanes/util20261014/workspace/jschfix5/release/target/jsch-0.2.18-reader5-sources.jar
+[INFO] 
+[INFO] --- javadoc:3.7.0:jar (attach-javadocs) @ jsch ---
+[INFO] No previous run data found, generating javadoc.
+[INFO] Building jar: /home/u/lanes/util20261014/workspace/jschfix5/release/target/jsch-0.2.18-reader5-javadoc.jar
+[INFO] 
+[INFO] --- cyclonedx:2.8.0:makeBom (default) @ jsch ---
+[INFO] CycloneDX: Resolving Dependencies
+[INFO] CycloneDX: Creating BOM version 1.5 with 6 component(s)
+[INFO] CycloneDX: Writing and validating BOM (XML): /home/u/lanes/util20261014/workspace/jschfix5/release/target/bom.xml
+[INFO]            attaching as jsch-0.2.18-reader5-cyclonedx.xml
+[INFO] CycloneDX: Writing and validating BOM (JSON): /home/u/lanes/util20261014/workspace/jschfix5/release/target/bom.json
+[INFO]            attaching as jsch-0.2.18-reader5-cyclonedx.json
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  06:23 min
+[INFO] Finished at: 2026-10-15T03:37:51Z
+[INFO] ------------------------------------------------------------------------
