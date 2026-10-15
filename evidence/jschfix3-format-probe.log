@@ -1,0 +1,15 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.github.mwiede:jsch >-----------------------
+[INFO] Building JSch 2.28.9-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- formatter:2.29.0:format (default-cli) @ jsch ---
+[INFO] Processed 1 files in 3s509ms (Formatted: 1, Skipped: 0, Unchanged: 0, Failed: 0, Readonly: 0)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.691 s
+[INFO] Finished at: 2026-10-15T01:35:57Z
+[INFO] ------------------------------------------------------------------------

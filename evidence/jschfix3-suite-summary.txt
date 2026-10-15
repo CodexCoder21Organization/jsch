@@ -1,0 +1,22 @@
+{"errors": 0, "failures": 0, "files": 31, "retry_records": 0, "rows": 519, "skipped": 0}
+connectionEndDiscardsDeferredClose()[1] 1.059 PASS
+connectionEndDiscardsDeferredClose()[2] 1.035 PASS
+connectionEndDiscardsDeferredClose()[3] 1.037 PASS
+lateOpenFailureSendsNoClose()[1] 1.097 PASS
+lateOpenFailureSendsNoClose()[2] 1.086 PASS
+lateOpenFailureSendsNoClose()[3] 1.085 PASS
+deferredCloseIsSentOnceAcrossConsecutiveRenegotiations()[1] 2.247 PASS
+deferredCloseIsSentOnceAcrossConsecutiveRenegotiations()[2] 2.256 PASS
+deferredCloseIsSentOnceAcrossConsecutiveRenegotiations()[3] 2.235 PASS
+inFlightLateConfirmationMustNotBlockRekey()[1] 1.084 PASS
+inFlightLateConfirmationMustNotBlockRekey()[2] 1.087 PASS
+inFlightLateConfirmationMustNotBlockRekey()[3] 1.087 PASS
+lateOpenAcknowledgementReleasesAllocatedStream()[1] 2.925 PASS
+lateOpenAcknowledgementReleasesAllocatedStream()[2] 1.141 PASS
+lateOpenAcknowledgementReleasesAllocatedStream()[3] 1.153 PASS
+sessionCloseReleasesStreamWhenOpenReplyDoesNotArrive()[1] 1.078 PASS
+sessionCloseReleasesStreamWhenOpenReplyDoesNotArrive()[2] 1.095 PASS
+sessionCloseReleasesStreamWhenOpenReplyDoesNotArrive()[3] 1.114 PASS
+disconnectWhileOpenReplyIsHeldReleasesAllocatedStream()[1] 0.101 PASS
+disconnectWhileOpenReplyIsHeldReleasesAllocatedStream()[2] 0.069 PASS
+disconnectWhileOpenReplyIsHeldReleasesAllocatedStream()[3] 0.097 PASS
