@@ -43,6 +43,9 @@ import org.junit.jupiter.api.Timeout;
 
 import java.net.Socket;
 import java.io.FilterInputStream;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicBoolean;
 class ChannelLateOpenRekeyTest {
   private static final int OPEN_TIMEOUT_MILLIS = 1_000;
@@ -140,10 +143,135 @@ class ChannelLateOpenRekeyTest {
     }
   }
 
+  @RepeatedTest(3)
+  @Timeout(value = 30, unit = TimeUnit.SECONDS)
+  void deferredCloseIsSentOnceAcrossConsecutiveRenegotiations() throws Exception {
+    HeldReplyPeer peer = new HeldReplyPeer();
+    SshServer server = peer.server();
+    GateSocketFactory sockets = new GateSocketFactory();
+    ExecutorService writer = Executors.newSingleThreadExecutor();
+    Session session = null;
+    try {
+      server.start();
+      session = connect(server, sockets);
+      // These rounds are ordered: the second exchange must observe the first drain.
+      for (int round = 0; round < 2; round++) {
+        peer.prepareReply();
+        ChannelExec late = (ChannelExec) session.openChannel("exec");
+        late.setCommand("late");
+        assertEquals(OPEN_TIMEOUT_MESSAGE,
+            assertThrows(JSchException.class, () -> late.connect(OPEN_TIMEOUT_MILLIS)).getMessage());
+        assertTrue(peer.openReplyHeld.await(5, TimeUnit.SECONDS), "Peer did not hold confirmation");
+        long recipient = peer.latestChannel.get().getChannelId();
+        sockets.prepare();
+        peer.releaseHeldOpenReply();
+        assertTrue(sockets.bytesHeld.await(5, TimeUnit.SECONDS), "Client did not hold confirmation");
+        peer.holdRenegotiation.set(true);
+        session.rekey();
+        assertTrue(peer.renegotiationHeld.await(5, TimeUnit.SECONDS), "Peer did not hold renegotiation");
+        CountDownLatch readerProgress = observeReaderProgress(session);
+        sockets.release.countDown();
+        peer.sendReaderMarker();
+        assertTrue(readerProgress.await(5, TimeUnit.SECONDS),
+            "Reader stopped after the late confirmation during renegotiation");
+        assertEquals(round, peer.receivedCloseCount.get(), "Close arrived before renegotiation completed");
+        peer.releaseRenegotiation();
+        Session current = session;
+        Future<?> write = writer.submit(() -> {
+          current.sendKeepAliveMsg();
+          return null;
+        });
+        write.get(5, TimeUnit.SECONDS);
+        assertTrue(peer.keepAliveReceived.await(5, TimeUnit.SECONDS), "Peer did not receive next write");
+        assertEquals(round + 1, peer.receivedCloseCount.get(), "Deferred close count changed");
+        assertEquals(1, java.util.Collections.frequency(peer.closeRecipients, recipient),
+            "Peer recipient did not receive exactly one close");
+        assertFalse(late.isConnected(), "Late confirmation reopened the local channel");
+        assertTrue(session.isConnected(), "Renegotiation ended the connection");
+      }
+      assertEquals(2, peer.closeRecipients.size(), "A deferred close was repeated across exchanges");
+    } finally {
+      sockets.release.countDown();
+      if (session != null) session.disconnect();
+      writer.shutdownNow();
+      assertTrue(writer.awaitTermination(5, TimeUnit.SECONDS), "Transport writer did not stop");
+      server.stop(true);
+    }
+  }
+
+  @RepeatedTest(3)
+  @Timeout(value = 30, unit = TimeUnit.SECONDS)
+  void connectionEndDiscardsDeferredClose() throws Exception {
+    HeldReplyPeer peer = new HeldReplyPeer();
+    SshServer server = peer.server();
+    GateSocketFactory sockets = new GateSocketFactory();
+    Session session = null;
+    try {
+      server.start();
+      session = connect(server, sockets);
+      ChannelExec late = (ChannelExec) session.openChannel("exec");
+      late.setCommand("late");
+      assertEquals(OPEN_TIMEOUT_MESSAGE,
+          assertThrows(JSchException.class, () -> late.connect(OPEN_TIMEOUT_MILLIS)).getMessage());
+      assertTrue(peer.openReplyHeld.await(5, TimeUnit.SECONDS), "Peer did not hold confirmation");
+      sockets.prepare();
+      peer.releaseHeldOpenReply();
+      assertTrue(sockets.bytesHeld.await(5, TimeUnit.SECONDS), "Client did not hold confirmation");
+      peer.holdRenegotiation.set(true);
+      session.rekey();
+      assertTrue(peer.renegotiationHeld.await(5, TimeUnit.SECONDS), "Peer did not hold renegotiation");
+      CountDownLatch readerProgress = observeReaderProgress(session);
+      sockets.release.countDown();
+      peer.sendReaderMarker();
+      assertTrue(readerProgress.await(5, TimeUnit.SECONDS),
+          "Reader stopped before the connection could discard its deferred close");
+      assertEquals(0, peer.receivedCloseCount.get(), "Close arrived while renegotiation was pending");
+      session.disconnect();
+      assertTrue(peer.connectionClosed.await(5, TimeUnit.SECONDS), "Peer connection did not end");
+      assertTrue(peer.firstStreamClosed.await(5, TimeUnit.SECONDS), "Peer allocation remained open");
+      assertEquals(0, peer.receivedCloseCount.get(), "Connection end wrote the deferred close");
+      assertFalse(late.isConnected(), "Late confirmation reopened the local channel");
+      assertFalse(session.isConnected(), "Connection remained active after disconnect");
+      assertEquals(0, peer.allocatedStreams.get(), "Peer retained a channel after connection end");
+    } finally {
+      sockets.release.countDown();
+      if (session != null) session.disconnect();
+      server.stop(true);
+    }
+  }
+
+  private static CountDownLatch observeReaderProgress(Session session) {
+    CountDownLatch progress = new CountDownLatch(1);
+    session.setLogger(new Logger() {
+      public boolean isEnabled(int level) { return true; }
+      public void log(int level, String message) {
+        if ("Received SSH_MSG_UNIMPLEMENTED for 12345".equals(message)) progress.countDown();
+      }
+    });
+    return progress;
+  }
+
+  private static Session connect(SshServer server, GateSocketFactory sockets) throws Exception {
+    Session session = new JSch().getSession("test", "127.0.0.1", server.getPort());
+    session.setSocketFactory(sockets);
+    session.setDaemonThread(true);
+    session.setPassword("test".getBytes(StandardCharsets.UTF_8));
+    session.setConfig("StrictHostKeyChecking", "no");
+    session.setConfig("kex", "ecdh-sha2-nistp256");
+    session.setConfig("CheckKexes", "ecdh-sha2-nistp256");
+    session.connect(10_000);
+    return session;
+  }
+
   private static final class GateSocketFactory implements SocketFactory {
     final AtomicBoolean armed = new AtomicBoolean();
-    final CountDownLatch bytesHeld = new CountDownLatch(1);
-    final CountDownLatch release = new CountDownLatch(1);
+    CountDownLatch bytesHeld = new CountDownLatch(1);
+    CountDownLatch release = new CountDownLatch(1);
+    void prepare() {
+      bytesHeld = new CountDownLatch(1);
+      release = new CountDownLatch(1);
+      armed.set(true);
+    }
     public Socket createSocket(String host, int port) throws IOException { return new Socket(host, port); }
     public OutputStream getOutputStream(Socket socket) throws IOException { return socket.getOutputStream(); }
     public InputStream getInputStream(Socket socket) throws IOException {
@@ -188,9 +316,17 @@ class ChannelLateOpenRekeyTest {
   private static final class HeldReplyPeer {
     private boolean rejectFirst;
     private boolean holdCommandOpen;
+    private final CountDownLatch connectionClosed = new CountDownLatch(1);
+    private final AtomicBoolean holdRenegotiation = new AtomicBoolean();
+    private CountDownLatch renegotiationHeld = new CountDownLatch(1);
+    private CountDownLatch keepAliveReceived = new CountDownLatch(1);
+    private final AtomicReference<PendingWriteFuture> heldRenegotiation = new AtomicReference<>();
+    private final AtomicReference<byte[]> renegotiationPacket = new AtomicReference<>();
+    private final AtomicReference<Channel> latestChannel = new AtomicReference<>();
+    private final List<Long> closeRecipients = new CopyOnWriteArrayList<>();
     private final AtomicBoolean rejectionUsed = new AtomicBoolean();
     private final AtomicInteger receivedCloseCount = new AtomicInteger();
-    private final CountDownLatch openReplyHeld = new CountDownLatch(1);
+    private CountDownLatch openReplyHeld = new CountDownLatch(1);
     private final CountDownLatch firstStreamCreated = new CountDownLatch(1);
     private final CountDownLatch firstStreamClosed = new CountDownLatch(1);
     private final AtomicInteger allocatedStreams = new AtomicInteger();
@@ -255,6 +391,7 @@ class ChannelLateOpenRekeyTest {
               allocatedStreams.decrementAndGet();
               return null;
             }
+            latestChannel.set(channel);
             if (firstChannel.compareAndSet(null, channel)) {
               firstStreamCreated.countDown();
             }
@@ -284,13 +421,29 @@ class ChannelLateOpenRekeyTest {
           ServerSessionImpl created = new ServerSessionImpl(server, ioSession) {
             @Override
             protected void doHandleMessage(Buffer buffer) throws Exception {
-              if ((buffer.rawByte(buffer.rpos()) & 0xff) == (SshConstants.SSH_MSG_CHANNEL_CLOSE & 0xff))
+              int message = buffer.rawByte(buffer.rpos()) & 0xff;
+              if (message == (SshConstants.SSH_MSG_CHANNEL_CLOSE & 0xff)) {
+                int position = buffer.rpos();
+                buffer.getByte();
+                closeRecipients.add(buffer.getUInt());
+                buffer.rpos(position);
                 receivedCloseCount.incrementAndGet();
+              }
+              if (message == (SshConstants.SSH_MSG_GLOBAL_REQUEST & 0xff))
+                keepAliveReceived.countDown();
               super.doHandleMessage(buffer);
             }
             @Override
             public IoWriteFuture writePacket(Buffer buffer) throws IOException {
               int message = buffer.rawByte(buffer.rpos()) & 0xff;
+              if (message == (SshConstants.SSH_MSG_KEXINIT & 0xff)
+                  && holdRenegotiation.compareAndSet(true, false)) {
+                PendingWriteFuture pending = new PendingWriteFuture(this);
+                heldRenegotiation.set(pending);
+                renegotiationPacket.set(buffer.getCompactData());
+                renegotiationHeld.countDown();
+                return pending;
+              }
               if (message == ((rejectFirst ? SshConstants.SSH_MSG_CHANNEL_OPEN_FAILURE : SshConstants.SSH_MSG_CHANNEL_OPEN_CONFIRMATION) & 0xff)
                   && heldReply.get() == null) {
                 PendingWriteFuture candidate = new PendingWriteFuture(this);
@@ -303,10 +456,38 @@ class ChannelLateOpenRekeyTest {
               return super.writePacket(buffer);
             }
           };
+          created.addCloseFutureListener(closed -> connectionClosed.countDown());
           serverSession.compareAndSet(null, created);
           return created;
         }
       });
+    }
+
+    private void prepareReply() {
+      heldReply.set(null);
+      heldPacket.set(null);
+      openReplyHeld = new CountDownLatch(1);
+      renegotiationHeld = new CountDownLatch(1);
+      keepAliveReceived = new CountDownLatch(1);
+    }
+
+    private void sendReaderMarker() throws Exception {
+      ServerSessionImpl current = serverSession.get();
+      Buffer marker = current.createBuffer(SshConstants.SSH_MSG_UNIMPLEMENTED, 4);
+      marker.putInt(12345);
+      assertTrue(current.writePacket(marker).await(5, TimeUnit.SECONDS), "Reader marker write did not finish");
+    }
+
+    private void releaseRenegotiation() throws Exception {
+      ServerSessionImpl current = serverSession.get();
+      byte[] packet = renegotiationPacket.get();
+      Buffer replay = current.createBuffer(packet[0], packet.length);
+      replay.putRawBytes(packet, 1, packet.length - 1);
+      IoWriteFuture actual = current.writePacket(replay);
+      actual.addListener((SshFutureListener<IoWriteFuture>) completed ->
+          heldRenegotiation.get().setValue(completed.isWritten() ? Boolean.TRUE : completed.getException()));
+      assertTrue(actual.await(5, TimeUnit.SECONDS), "Peer renegotiation reply did not finish");
+      assertTrue(actual.isWritten(), "Peer renegotiation reply was not written");
     }
 
     private void releaseHeldOpenReply() throws Exception {
