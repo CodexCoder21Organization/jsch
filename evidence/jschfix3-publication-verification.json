@@ -1,0 +1,38 @@
+{
+  "verified_at": "2026-10-15T01:48:00.965387+00:00",
+  "coordinates": "com.github.mwiede:jsch:0.2.18-reader4",
+  "publisher_version": "0.0.6",
+  "publisher_exit_code": 0,
+  "release_source_head": "039816edbddec37610c1223524c4337a81a9a433",
+  "pr_source_head": "b531bee708c94c7be7ce40942225393885482eb5",
+  "files": {
+    "jsch-0.2.18-reader4-javadoc.jar": {
+      "url": "https://kotlin.directory/com/github/mwiede/jsch/0.2.18-reader4/jsch-0.2.18-reader4-javadoc.jar",
+      "http_status": 200,
+      "bytes": 510622,
+      "sha256": "b4db5648ce814af658187cf558ef539870bb5613bac7a53fafe14911f9b51234",
+      "matches_local": true
+    },
+    "jsch-0.2.18-reader4-sources.jar": {
+      "url": "https://kotlin.directory/com/github/mwiede/jsch/0.2.18-reader4/jsch-0.2.18-reader4-sources.jar",
+      "http_status": 200,
+      "bytes": 530651,
+      "sha256": "63def35f0b95a5142ed2cc25dd42001f3c851b8108a6053ff925a10ae1a0c994",
+      "matches_local": true
+    },
+    "jsch-0.2.18-reader4.jar": {
+      "url": "https://kotlin.directory/com/github/mwiede/jsch/0.2.18-reader4/jsch-0.2.18-reader4.jar",
+      "http_status": 200,
+      "bytes": 550380,
+      "sha256": "dcff7548fdfed37897e8af0077d8045e11b7bdaea8c199d76d306ce2670c123e",
+      "matches_local": true
+    },
+    "jsch-0.2.18-reader4.pom": {
+      "url": "https://kotlin.directory/com/github/mwiede/jsch/0.2.18-reader4/jsch-0.2.18-reader4.pom",
+      "http_status": 200,
+      "bytes": 2111,
+      "sha256": "69c847836d58e43a4983cb72563c669c5a436f306c23f814b7f8ab36c4f7ffe8",
+      "matches_local": true
+    }
+  }
+}

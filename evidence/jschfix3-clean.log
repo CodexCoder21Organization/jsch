@@ -1,0 +1,18 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.github.mwiede:jsch >-----------------------
+[INFO] Building JSch 0.2.18-reader4
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.3.2:clean (default-clean) @ jsch ---
+[INFO] Deleting /home/u/lanes/util20261014/workspace/jschfix3/target
+[INFO] 
+[INFO] --- flatten:1.6.0:clean (flatten.clean) @ jsch ---
+[INFO] Deleting /home/u/lanes/util20261014/workspace/jschfix3/.flattened-pom.xml
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.001 s
+[INFO] Finished at: 2026-10-15T01:49:00Z
+[INFO] ------------------------------------------------------------------------

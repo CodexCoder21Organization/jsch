@@ -5,8 +5,8 @@ Plan:
 - [done] Read lane rules, predecessor/review findings, repository README/Readme and testing/philosophy documents; verify fresh checkout.
 - [done] Add public-API consecutive-renegotiation and disconnect tests; record PR-head red results and push test milestone.
 - [done] Correction 3/3 plus unchanged lifecycle rows; product-only reversal; full Maven suite once.
-- [in progress] Independent test/source reviews complete; reader3 lineage preserved; release suite/package running before reader4 publication/checksum verification.
-- [pending] Update open PR branch/description, record Finding 2 disposition, preserve evidence and clean processes.
+- [done] Independent test/source reviews; reader3 lineage preserved; reader4 published with public URL/checksum verification.
+- [done] Update open PR branch/description, record Finding 2 disposition, preserve evidence and clean processes.
 
 OBSERVED: Fresh clone at 21d416b113697aac9e4f02d53aced3b314d8918b; origin/master rebase unchanged. PR https://github.com/CodexCoder21Organization/jsch/pull/3 is OPEN at 764cda9c7fd215d57a1f6b7faa647647ef88829d, branch wip/jschfix2-master. No AGENTS.md. POM coordinates com.github.mwiede:jsch, default branch master. Explicit task grants publication and full local Maven suite; no remote Maven gate exists. One local slot with owner per invocation. No merge or CI monitoring.
 
@@ -62,3 +62,22 @@ Remaining path: finish release suite/package, verify artifact contents, publish/
 
 2026-10-15 01:47 UTC — OBSERVED: Reader4 package completed exit0 / BUILD SUCCESS at exact head 039816edbddec37610c1223524c4337a81a9a433 in 6:00. Native XML: 21 files, 227 rows, zero failures/errors/skips/retries. All 12 renegotiation rows, all nine original lifecycle rows, and all eight receive-flow rows passed their first attempts. XML and summary preserved in out/jschfix3-reader4-results/ and out/jschfix3-reader4-summary.txt. Release source checkpoint pushed to https://github.com/CodexCoder21Organization/jsch/tree/wip/jschfix3-reader4.
 OBSERVED: Artifact contents verified before upload: all 285 checked-in source files match the sources jar; generated protocol version and manifest identify reader4; base Channel class major version52 (Java8); no peer/test/dependency classes bundled in the library jar. Flattened POM coordinate is com.github.mwiede:jsch:0.2.18-reader4 and all dependency declarations match the retrieved reader3 POM. Four file hashes recorded in out/jschfix3-artifact-verification.json. No publication result is claimed before the publisher finishes and public files are retrieved.
+
+2026-10-15 01:48 UTC — OBSERVED: Immediate pre-upload reader4 POM probe still returned404. Authorized publisher0.0.6 completed exit0. All four public files now return200 and match local SHA-256 exactly (POM, library jar, sources jar, Javadoc jar). Public POM declares com.github.mwiede:jsch:0.2.18-reader4. Retrieval/checksum evidence is out/jschfix3-publication-verification.json, verified at 01:48:00 UTC. Source release head039816edbddec37610c1223524c4337a81a9a433 is on remote wip/jschfix3-reader4.
+OBSERVED: https://github.com/CodexCoder21Organization/jsch/pull/3 description and title updated through GitHub API and description read back exactly. API confirms OPEN at b531bee708c94c7be7ce40942225393885482eb5. Description opens with the review's deployed-connection symptom, explains the reader wait and deferred recipient design, names every scenario/gate and reader4 publication, preserves the original lifecycle hash, and clearly records the formatting constraint. No merge, enqueue, production connection, CI watch, handoff service call or challenge service call performed.
+
+## Brief audit
+| Item | State and evidence |
+|---|---|
+| Two missing public-API scenarios | DONE: exact prior PR product red3/3 each, reader3 product red3/3 each; corrected master/release green3/3 each, all native first attempts |
+| Original lifecycle9 rows byte-identical | DONE: SHA-256 eb523698b133d41a85650bab5650a7da18e282ce3c5d6b0720199f98689835d5 on both final lines; 9/9 passing |
+| Full suite once and product-only reversal | DONE: master519/519 once, correction-only Session reversal6/6 red; release227/227 once |
+| Publicationreader4, URL/checksum | DONE: publisher0.0.6 exit0; pre-upload404; all4 public files200 + matching SHA-256; all285 checked-in Java sources match publication |
+| Correction on existing PR branch/body | DONE: OPEN at b531bee708c94c7be7ce40942225393885482eb5; title/body updated and exact read-back |
+| Finding2 | DONE per permitted follow-up route: recorded above with master PR file:line and source mechanism; no runtime wrap or guessed fix claimed |
+| Additional formatting validation | BLOCKED by explicit byte-identity constraint: unchanged lifecycle file needs whitespace formatting; candidate preserved separately, no validator exclusions or assertion edits |
+| Stop without merge, process cleanup | DONE: no merge; Maven clean, clean working tree, zero owned build/test/publisher processes and slots |
+
+2026-10-15 01:51 UTC — FINAL status: NOT READY for an all-checks-green handoff because global formatting validation requests changes to the original lifecycle file while the user requires it byte-identical. The requested product/tests/publication/PR update are complete. The constraint is recorded above with the exact validator result and a formatting-only candidate at https://github.com/CodexCoder21Organization/jsch/blob/wip/jschfix3-evidence/evidence/jschfix3-format-probe/src/test/java/com/jcraft/jsch/ChannelLateOpenTest.java ; do not weaken or exclude the validator. Orchestrator must resolve the byte-identity constraint before adopting that formatting-only candidate.
+OBSERVED: PR freshly re-verified OPEN/non-draft at https://github.com/CodexCoder21Organization/jsch/commit/b531bee708c94c7be7ce40942225393885482eb5 ; release source https://github.com/CodexCoder21Organization/jsch/commit/039816edbddec37610c1223524c4337a81a9a433 is pushed and reader4 is publicly retrieved/checksum-verified. Current checkout is wip/jschfix3-progress at the PR head, working tree clean. Maven clean removed target and flattened POM. ps -eo pid,args -ww confirms zero owned compiler/test/publisher/wait processes (the calling agent's ancestor launchers are excluded), and no owned slot remains. All delegated review invocations finished. Temporary publication/probe directories will be removed after preserving their evidence blobs; no loop is active.
+Final remaining path: orchestrator resolves whether to allow the lifecycle whitespace-only formatting; optional identifier reuse work remains separately recorded under FOLLOW-UP. No merge or deployment was requested or performed; artifact publication alone was explicitly authorized and completed.
