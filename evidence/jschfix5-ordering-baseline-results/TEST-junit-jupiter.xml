@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Jupiter" tests="30" skipped="0" failures="2" errors="0" time="13.521" hostname="cbef45b72539" timestamp="2026-10-15T03:10:36">
+<properties>
+<property name="file.encoding" value="UTF-8"/>
+<property name="file.separator" value="/"/>
+<property name="java.class.path" value="/home/u/lanes/util20261014/out/jschfix5-probe-classes:target/classes:/home/u/.cache/coursier/v1/https/maven-central.storage-download.googleapis.com/maven2/org/junit/platform/junit-platform-console-standalone/1.13.4/junit-platform-console-standalone-1.13.4.jar:/home/u/.cache/coursier/v1/https/maven-central.storage-download.googleapis.com/maven2/org/apache/sshd/sshd-core/2.12.0/sshd-core-2.12.0.jar:/home/u/.cache/coursier/v1/https/maven-central.storage-download.googleapis.com/maven2/org/slf4j/slf4j-nop/2.0.17/slf4j-nop-2.0.17.jar:/home/u/.cache/coursier/v1/https/maven-central.storage-download.googleapis.com/maven2/org/apache/sshd/sshd-common/2.12.0/sshd-common-2.12.0.jar:/home/u/.cache/coursier/v1/https/maven-central.storage-download.googleapis.com/maven2/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar:/home/u/.cache/coursier/v1/https/maven-central.storage-download.googleapis.com/maven2/org/slf4j/jcl-over-slf4j/1.7.32/jcl-over-slf4j-1.7.32.jar"/>
+<property name="java.class.version" value="69.0"/>
+<property name="java.home" value="/home/u/.cache/coursier/arc/https/github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4.1%252B1/OpenJDK25U-jdk_x64_linux_hotspot_25.0.4.1_1.tar.gz/jdk-25.0.4.1+1"/>
+<property name="java.io.tmpdir" value="/tmp"/>
+<property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+<property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+<property name="java.runtime.version" value="25.0.4.1+1-LTS"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="25"/>
+<property name="java.vendor" value="Eclipse Adoptium"/>
+<property name="java.vendor.url" value="https://adoptium.net/"/>
+<property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+<property name="java.vendor.version" value="Temurin-25.0.4.1+1"/>
+<property name="java.version" value="25.0.4.1"/>
+<property name="java.version.date" value="2026-08-18"/>
+<property name="java.vm.compressedOopsMode" value="Zero based"/>
+<property name="java.vm.info" value="mixed mode, sharing"/>
+<property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="25"/>
+<property name="java.vm.vendor" value="Eclipse Adoptium"/>
+<property name="java.vm.version" value="25.0.4.1+1-LTS"/>
+<property name="jdk.debug" value="release"/>
+<property name="junit.docs.version" value="1.13.4"/>
+<property name="line.separator" value="&#10;"/>
+<property name="native.encoding" value="UTF-8"/>
+<property name="os.arch" value="amd64"/>
+<property name="os.name" value="Linux"/>
+<property name="os.version" value="6.8.0-124-generic"/>
+<property name="path.separator" value=":"/>
+<property name="stderr.encoding" value="UTF-8"/>
+<property name="stdin.encoding" value="UTF-8"/>
+<property name="stdout.encoding" value="UTF-8"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.boot.library.path" value="/home/u/.cache/coursier/arc/https/github.com/adoptium/temurin25-binaries/releases/download/jdk-25.0.4.1%252B1/OpenJDK25U-jdk_x64_linux_hotspot_25.0.4.1_1.tar.gz/jdk-25.0.4.1+1/lib"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher execute --select-method com.jcraft.jsch.PendingCloseOrderingProbe#repeatedLateConfirmationsProduceOneCloseAfterExchange --config junit.jupiter.execution.parallel.enabled=true --config junit.jupiter.execution.parallel.mode.default=concurrent --config junit.jupiter.execution.parallel.config.strategy=fixed --config junit.jupiter.execution.parallel.config.fixed.parallelism=8 --reports-dir /home/u/lanes/util20261014/out/jschfix5-ordering-baseline-results --disable-banner --details=summary"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="UTF-8"/>
+<property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<property name="user.dir" value="/home/u/lanes/util20261014/workspace/jschfix5"/>
+<property name="user.home" value="/home/u"/>
+<property name="user.language" value="en"/>
+<property name="user.name" value="u"/>
+<property name="user.timezone" value="Etc/UTC"/>
+</properties>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[1]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="4.904">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#1]
+display-name: repetition 1 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[2]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="5.062">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#2]
+display-name: repetition 2 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[5]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="4.784">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#5]
+display-name: repetition 5 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[6]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="5.247">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#6]
+display-name: repetition 6 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[3]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="4.783">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#3]
+display-name: repetition 3 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[4]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="9.986">
+<failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at com.jcraft.jsch.PendingCloseOrderingProbe.repeatedLateConfirmationsProduceOneCloseAfterExchange(PendingCloseOrderingProbe.java:182)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#4]
+display-name: repetition 4 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[9]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.939">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#9]
+display-name: repetition 9 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[7]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="4.78">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#7]
+display-name: repetition 7 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[8]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.758">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#8]
+display-name: repetition 8 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[10]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.872">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#10]
+display-name: repetition 10 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[11]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.672">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#11]
+display-name: repetition 11 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[30]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.479">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#30]
+display-name: repetition 30 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[14]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.886">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#14]
+display-name: repetition 14 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[15]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.681">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#15]
+display-name: repetition 15 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[12]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.656">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#12]
+display-name: repetition 12 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[13]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="2.074">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#13]
+display-name: repetition 13 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[18]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.55">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#18]
+display-name: repetition 18 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[19]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.623">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#19]
+display-name: repetition 19 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[16]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="4.845">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#16]
+display-name: repetition 16 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[17]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="6.549">
+<failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+	at com.jcraft.jsch.PendingCloseOrderingProbe.repeatedLateConfirmationsProduceOneCloseAfterExchange(PendingCloseOrderingProbe.java:182)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+]]></failure>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#17]
+display-name: repetition 17 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[21]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.644">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#21]
+display-name: repetition 21 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[22]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.459">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#22]
+display-name: repetition 22 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[20]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.898">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#20]
+display-name: repetition 20 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[25]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.339">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#25]
+display-name: repetition 25 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[26]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.36">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#26]
+display-name: repetition 26 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[23]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.6">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#23]
+display-name: repetition 23 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[24]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.362">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#24]
+display-name: repetition 24 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[29]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.879">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#29]
+display-name: repetition 29 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[27]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.514">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#27]
+display-name: repetition 27 of 30
+]]></system-out>
+</testcase>
+<testcase name="repeatedLateConfirmationsProduceOneCloseAfterExchange()[28]" classname="com.jcraft.jsch.PendingCloseOrderingProbe" time="1.736">
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]/[class:com.jcraft.jsch.PendingCloseOrderingProbe]/[test-template:repeatedLateConfirmationsProduceOneCloseAfterExchange()]/[test-template-invocation:#28]
+display-name: repetition 28 of 30
+]]></system-out>
+</testcase>
+<system-out><![CDATA[
+unique-id: [engine:junit-jupiter]
+display-name: JUnit Jupiter
+]]></system-out>
+</testsuite>

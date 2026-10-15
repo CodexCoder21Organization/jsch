@@ -1,0 +1,1677 @@
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 44895
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 32879
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 36535
+CLIENT Caught an exception, leaving main loop due to Socket closed
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:242)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:321)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at com.jcraft.jsch.IO.getByte(IO.java:95)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT Caught an exception, leaving main loop due to Socket closed
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:242)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:321)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at com.jcraft.jsch.IO.getByte(IO.java:95)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 45139
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+PEER EXCEPTION java.lang.IllegalStateException: Not initialized
+java.lang.IllegalStateException: Not initialized
+	at java.base/sun.security.ec.ECDHKeyAgreement.engineDoPhase(ECDHKeyAgreement.java:134)
+	at java.base/javax.crypto.KeyAgreement.doPhase(KeyAgreement.java:588)
+	at org.apache.sshd.common.kex.ECDH.calculateK(ECDH.java:89)
+	at org.apache.sshd.common.kex.AbstractDH.getK(AbstractDH.java:95)
+	at org.apache.sshd.server.kex.DHGServer.next(DHGServer.java:103)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleKexMessage(AbstractSession.java:761)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:621)
+	at com.jcraft.jsch.PendingCloseOrderingProbe$Peer.doHandleMessage(PendingCloseOrderingProbe.java:81)
+	at org.apache.sshd.common.session.helpers.AbstractSession.lambda$handleMessage$0(AbstractSession.java:545)
+	at org.apache.sshd.common.util.threads.ThreadUtils.runAsInternal(ThreadUtils.java:68)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:544)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1688)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:505)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:409)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:382)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:377)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:74)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:121)
+	at java.base/sun.nio.ch.Invoker$1.run(Invoker.java:201)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+CLIENT Caught an exception, leaving main loop due to End of IO Stream Read
+java.io.IOException: End of IO Stream Read
+	at com.jcraft.jsch.IO.getByte(IO.java:97)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT Disconnecting from 127.0.0.1 port 37569
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 46287
+CLIENT Caught an exception, leaving main loop due to Socket closed
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:242)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:321)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at com.jcraft.jsch.IO.getByte(IO.java:95)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 45869
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 35105
+CLIENT Caught an exception, leaving main loop due to Socket closed
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:242)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:321)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at com.jcraft.jsch.IO.getByte(IO.java:95)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 38157
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 36639
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT Caught an exception, leaving main loop due to Socket closed
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:242)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:321)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at com.jcraft.jsch.IO.getByte(IO.java:95)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 38761
+CLIENT Caught an exception, leaving main loop due to Socket closed
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:242)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:321)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at com.jcraft.jsch.IO.getByte(IO.java:95)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 45081
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 34131
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 40963
+CLIENT Caught an exception, leaving main loop due to Socket closed
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:242)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:321)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at com.jcraft.jsch.IO.getByte(IO.java:95)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 37423
+CLIENT Caught an exception, leaving main loop due to Socket closed
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:242)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:321)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at com.jcraft.jsch.IO.getByte(IO.java:95)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+PEER EXCEPTION java.lang.IllegalStateException: Not initialized
+java.lang.IllegalStateException: Not initialized
+	at java.base/sun.security.ec.ECDHKeyAgreement.engineDoPhase(ECDHKeyAgreement.java:134)
+	at java.base/javax.crypto.KeyAgreement.doPhase(KeyAgreement.java:588)
+	at org.apache.sshd.common.kex.ECDH.calculateK(ECDH.java:89)
+	at org.apache.sshd.common.kex.AbstractDH.getK(AbstractDH.java:95)
+	at org.apache.sshd.server.kex.DHGServer.next(DHGServer.java:103)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleKexMessage(AbstractSession.java:761)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:621)
+	at com.jcraft.jsch.PendingCloseOrderingProbe$Peer.doHandleMessage(PendingCloseOrderingProbe.java:81)
+	at org.apache.sshd.common.session.helpers.AbstractSession.lambda$handleMessage$0(AbstractSession.java:545)
+	at org.apache.sshd.common.util.threads.ThreadUtils.runAsInternal(ThreadUtils.java:68)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:544)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1688)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:505)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:409)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:382)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:377)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:74)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:121)
+	at java.base/sun.nio.ch.Invoker$1.run(Invoker.java:201)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT Caught an exception, leaving main loop due to End of IO Stream Read
+java.io.IOException: End of IO Stream Read
+	at com.jcraft.jsch.IO.getByte(IO.java:97)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT Disconnecting from 127.0.0.1 port 45839
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 33821
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 36453
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 44189
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 41805
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 40191
+CLIENT Caught an exception, leaving main loop due to Socket closed
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:242)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:321)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at com.jcraft.jsch.IO.getByte(IO.java:95)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 35225
+CLIENT Caught an exception, leaving main loop due to Socket closed
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:242)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:321)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at com.jcraft.jsch.IO.getByte(IO.java:95)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 36351
+CLIENT Caught an exception, leaving main loop due to Cannot invoke "com.jcraft.jsch.IO.getByte(byte[], int, int)" because "this.io" is null
+java.lang.NullPointerException: Cannot invoke "com.jcraft.jsch.IO.getByte(byte[], int, int)" because "this.io" is null
+	at com.jcraft.jsch.Session.read(Session.java:1346)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 41685
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 45917
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 37553
+CLIENT Caught an exception, leaving main loop due to Socket closed
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:242)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:321)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at com.jcraft.jsch.IO.getByte(IO.java:95)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 36255
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 37417
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT CheckCiphers: chacha20-poly1305@openssh.com
+CLIENT CheckKexes: ecdh-sha2-nistp256
+CLIENT CheckSignatures: ssh-ed25519,ssh-ed448
+CLIENT ssh-ed25519 is not available.
+CLIENT ssh-ed448 is not available.
+CLIENT server_host_key proposal before removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable algos is: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after removing unavailable cert algos is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal before known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT server_host_key proposal after known_host reordering is: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT SSH_MSG_KEXINIT sent
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11111
+OBSERVED pending late replies processed without completing exchange=256
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 45891
+CLIENT Caught an exception, leaving main loop due to Socket closed
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endRead(NioSocketImpl.java:242)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:321)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at com.jcraft.jsch.IO.getByte(IO.java:95)
+	at com.jcraft.jsch.Session.read(Session.java:1321)
+	at com.jcraft.jsch.Session.run(Session.java:1980)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+CLIENT Received SSH_MSG_UNIMPLEMENTED for 11112
+OBSERVED pending late replies processed without completing exchange=512
+CLIENT server proposal: KEX algorithms: curve25519-sha256,curve25519-sha256@libssh.org,curve448-sha512,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256,diffie-hellman-group18-sha512,diffie-hellman-group17-sha512,diffie-hellman-group16-sha512,diffie-hellman-group15-sha512,diffie-hellman-group14-sha256
+CLIENT server proposal: host key algorithms: ecdsa-sha2-nistp256
+CLIENT server proposal: ciphers c2s: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: ciphers s2c: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-cbc,aes192-cbc,aes256-cbc
+CLIENT server proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT server proposal: compression c2s: none,zlib,zlib@openssh.com
+CLIENT server proposal: compression s2c: none,zlib,zlib@openssh.com
+CLIENT server proposal: languages c2s: 
+CLIENT server proposal: languages s2c: 
+CLIENT client proposal: KEX algorithms: ecdh-sha2-nistp256
+CLIENT client proposal: host key algorithms: ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,rsa-sha2-512,rsa-sha2-256
+CLIENT client proposal: ciphers c2s: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: ciphers s2c: aes128-gcm@openssh.com,aes256-gcm@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr
+CLIENT client proposal: MACs c2s: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: MACs s2c: hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+CLIENT client proposal: compression c2s: none
+CLIENT client proposal: compression s2c: none
+CLIENT client proposal: languages c2s: 
+CLIENT client proposal: languages s2c: 
+CLIENT kex: algorithm: ecdh-sha2-nistp256
+CLIENT kex: host key algorithm: ecdsa-sha2-nistp256
+CLIENT kex: server->client cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT kex: client->server cipher: aes128-gcm@openssh.com MAC: <implicit> compression: none
+CLIENT SSH_MSG_KEX_ECDH_INIT sent
+CLIENT expecting SSH_MSG_KEX_ECDH_REPLY
+CLIENT ssh_ecdsa_verify: ecdsa-sha2-nistp256 signature true
+CLIENT Reset outgoing sequence number after sending SSH_MSG_NEWKEYS for strict KEX
+CLIENT SSH_MSG_NEWKEYS sent
+CLIENT Reset incoming sequence number after receiving SSH_MSG_NEWKEYS for strict KEX
+OBSERVED close notices for one abandoned recipient=0 count=1
+CLIENT Disconnecting from 127.0.0.1 port 45259
+
+Failures (2):
+  JUnit Jupiter:PendingCloseOrderingProbe:repeatedLateConfirmationsProduceOneCloseAfterExchange():repetition 4 of 30
+    MethodSource [className = 'com.jcraft.jsch.PendingCloseOrderingProbe', methodName = 'repeatedLateConfirmationsProduceOneCloseAfterExchange', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+       com.jcraft.jsch.PendingCloseOrderingProbe.repeatedLateConfirmationsProduceOneCloseAfterExchange(PendingCloseOrderingProbe.java:182)
+       java.base/java.lang.reflect.Method.invoke(Method.java:565)
+       java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+       java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+       [...]
+  JUnit Jupiter:PendingCloseOrderingProbe:repeatedLateConfirmationsProduceOneCloseAfterExchange():repetition 17 of 30
+    MethodSource [className = 'com.jcraft.jsch.PendingCloseOrderingProbe', methodName = 'repeatedLateConfirmationsProduceOneCloseAfterExchange', methodParameterTypes = '']
+    => org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+       org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+       org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+       org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+       org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:31)
+       org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:183)
+       com.jcraft.jsch.PendingCloseOrderingProbe.repeatedLateConfirmationsProduceOneCloseAfterExchange(PendingCloseOrderingProbe.java:182)
+       java.base/java.lang.reflect.Method.invoke(Method.java:565)
+       java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)
+       java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)
+       [...]
+
+Test run finished after 14445 ms
+[         5 containers found      ]
+[         0 containers skipped    ]
+[         5 containers started    ]
+[         0 containers aborted    ]
+[         5 containers successful ]
+[         0 containers failed     ]
+[        30 tests found           ]
+[         0 tests skipped         ]
+[        30 tests started         ]
+[         0 tests aborted         ]
+[        28 tests successful      ]
+[         2 tests failed          ]
+

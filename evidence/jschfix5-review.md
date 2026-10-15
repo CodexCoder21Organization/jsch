@@ -52,3 +52,25 @@ No finding on retaining IDs for opens that have not received a reply: each such 
 1. **Action required before relying on the repeated late-confirmation test:** serialize the held KEXINIT replay with Apache SSHD's normal decode and handler path. The current targeted gate is not green.
 2. **No Session bookkeeping or lock-order finding:** registration, one-time consumption, late confirmation cleanup, failure consumption, and disconnect cleanup are consistent in both master and reader4-lineage release applications.
 3. **Protected test files preserved:** both are byte-identical to their respective baseline commits.
+
+## Review update: peer ordering diagnosis and proposed fixture correction
+
+OBSERVED — I read `/home/u/lanes/util20261014/out/jschfix5-ordering-baseline.log`. The concurrent diagnostic completed 30 rows with 28 passes and two failures, both at the `followingWrite` assertion. Both corresponding peer traces report `IllegalStateException: Not initialized` from `ECDH.calculateK` through `DHGServer.next` and `AbstractSession.handleKexMessage`. This confirms that the earlier stall is in the test peer's rekey ordering, not in Session's reply bookkeeping.
+
+OBSERVED — The trace matches the source sequence. Apache SSHD's `messageReceived()` holds `decodeLock` while decoding and dispatching. `handleMessage()` runs the virtual message handler through `ThreadUtils.runAsInternal`. In `doKexNegotiation()`, the server sends its KEXINIT before creating and initializing its key-exchange object. The local SSHD 2.12.0 bytecode also shows `DHGServer.init()` stores the `dh` field before calling `dh.getE()`; `ECDH.calculateE()` initializes the key agreement as part of that call. A second handler that bypasses `decodeLock` can therefore reach `calculateK()` before the first handler finishes initializing the agreement, matching the observed exception.
+
+OBSERVED — I reviewed the proposed correction in `/home/u/lanes/util20261014/out/jschfix5-ordering-corrected.java:84-87`:
+
+```java
+synchronized (decodeLock) {
+  super.handleMessage(new ByteArrayBuffer(proposal));
+}
+```
+
+This addresses the diagnosed overlap and restores both parts of the normal dispatch path: the same decoder monitor serializes proposal handling with incoming packets, and `handleMessage()` runs the handler in SSHD's internal session context. It does not recursively call `resumeProposal()`: `handleMessage()` dispatches once to `Peer.doHandleMessage()`, where the hold flag is already false, and that override forwards the KEXINIT to `super.doHandleMessage()`. `handleMessage()` does not acquire `decodeLock` itself, so this code does not cause nested lock acquisition. The production `messageReceived()` calls it while holding the same monitor, making this equivalent in ordering.
+
+INFER — No additional peer-completion latch is needed for this fix. The replay returns after the normal handler has finished setting up the exchange; the follow-up call to JSch `Session.write()` waits while `in_kex` is true, so its keepalive is not sent until the client-side exchange completes. The existing peer `followingWrite` latch remains a useful end-to-end check that the request arrived.
+
+Review resolution: the test finding from the prior review is confirmed and the proposed candidate correction addresses its cause. The corrected diagnostic is still pending; this review did not run it. The previous 26/27 targeted-gate result remains the last gate result, so no green claim is made. No Session source finding was added.
+
+Clarification — This update supersedes the earlier suggestion to add an explicit peer-completion latch. The reviewed correction needs only the serialized `handleMessage()` replay; the existing `Session.write()` wait for `in_kex` to clear provides the exchange-completion ordering before the keepalive is sent.

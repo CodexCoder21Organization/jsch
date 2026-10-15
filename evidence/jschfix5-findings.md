@@ -167,3 +167,55 @@ org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 
 2026-10-15 03:06 UTC — OBSERVED: Separate reviewer completed source/test/release passes with one actionable fixture-ordering finding and no product finding. Required protected files remain identical on both source lines, release receiveCreditOwner guard retained.
 INFER pending experiment: Peer.resumeProposal replays directly through super.doHandleMessage on the test thread without the dependency decoder lock. Official SSHD2.12.0 messageReceived owns decodeLock through doKexNegotiation; doKexNegotiation sends its proposal before assigning/initializing the exchange object. The bypass can let the real client reply enter decoder handling before that initialization. A diagnostic copy of the unchanged real-transport scenario runs30 repetitions with eight actual concurrent peer/client pairs, retaining peer exception and client diagnostic messages. It is waiting on one local build slot (no test verdict yet); no product change is proposed for this fixture issue.
+
+2026-10-15 03:11 UTC — OBSERVED: Diagnostic30 completed with28 passes/two failures, both the same following-write assertion. Both failed peer connections reported IllegalStateException: Not initialized, at ECDH.calculateK -> DHGServer.next -> AbstractSession.handleKexMessage while the test thread replays the proposal outside decodeLock. This confirms the fixture overlap mechanism, not a Session reply-bookkeeping failure. Native XML/full logs at out/jschfix5-ordering-baseline-results/ and out/jschfix5-ordering-baseline.log. Increasing diagnostic sample to100 before correction; this keeps the same public connection path and eight genuine concurrent pairs, without extra artificial work. The corrected diagnostic will use the same100 samples to distinguish the observed baseline rate with a sub-one-percent chance of an unchanged implementation passing all samples.
+
+Peer exception stack from diagnostic:
+```text
+PEER EXCEPTION java.lang.IllegalStateException: Not initialized
+java.lang.IllegalStateException: Not initialized
+	at java.base/sun.security.ec.ECDHKeyAgreement.engineDoPhase(ECDHKeyAgreement.java:134)
+	at java.base/javax.crypto.KeyAgreement.doPhase(KeyAgreement.java:588)
+	at org.apache.sshd.common.kex.ECDH.calculateK(ECDH.java:89)
+	at org.apache.sshd.common.kex.AbstractDH.getK(AbstractDH.java:95)
+	at org.apache.sshd.server.kex.DHGServer.next(DHGServer.java:103)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleKexMessage(AbstractSession.java:761)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:621)
+	at com.jcraft.jsch.PendingCloseOrderingProbe$Peer.doHandleMessage(PendingCloseOrderingProbe.java:81)
+	at org.apache.sshd.common.session.helpers.AbstractSession.lambda$handleMessage$0(AbstractSession.java:545)
+	at org.apache.sshd.common.util.threads.ThreadUtils.runAsInternal(ThreadUtils.java:68)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:544)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1688)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:505)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:409)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:382)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:377)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:74)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:121)
+	at java.base/sun.nio.ch.Invoker$1.run(Invoker.java:201)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:108)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+
+```
+
+2026-10-15 03:13 UTC — RUNNING status report. Original request: finish one close notice per abandoned open on https://github.com/CodexCoder21Organization/jsch/pull/3, publish0.2.18-reader5, update PR and stop at requested CI green without merging. Last freshly read PR state OPEN at ca942b701392a185dd2caa28de154750db5b0ef4; local product candidate c89636447f36d21681b8b47b06b7f6c4b6647a3b, not yet pushed pending corrected gates.
+The library records one expected reply for each actually sent open. The first confirmation or failure consumes it. A valid late confirmation enters the existing close queue once, while repeated and unknown replies are logged and ignored.
+Changes since start: new failure-then-confirmation test red3/3 and main repeated-reply test red3/3 under product reversal; independent source/release review found no product issue. First corrected gate26/27 found an actual test-peer overlap; diagnostic30 observed two peer Not initialized errors. Diagnostic100 is queued for a local slot before restoring normal peer decoder serialization. Both protected files remain identical,21/21 passed on current unchanged product candidate.
+Delegated work at a glance: gpt-6-luna max read-only review completed; no delegated invocation remains active. It verified source locks, release lineage and preserved hashes, and independently identified the fixture bypass of decoder serialization.
+Blockers: no user decision needed. Local slots are currently occupied; bounded diagnostic submission waits, no gate result claimed without XML. The inherited protected-file formatting constraint is recorded and will be validated without an exclusion.
+Parallelization sweep: read-only review and release source preparation completed alongside test work; release packaging depends on the corrected fixture. No merge/queue operation is in scope.
+Remaining path: finish the fixture comparison, new-test gate and master/release suites, publish/verify reader5, update PR text, verify both requested CI checks, preserve evidence and stop owned processes.
+Lessons: preserve normal dependency message serialization in real-peer test fixtures; collect both sides of a missing-message failure before changing code; use actual reply counts to prove once-only behavior rather than timing thresholds.
+
+2026-10-15 03:18 UTC — OBSERVED: Before correction, diagnostic100 finished90 passes/10 failures, zero errors/skips. The100-scenario batch failed, with the same following-write assertion and captured peer setup errors. This independently reproduces the initial missing-keepalive failure.
+MECHANISM for fixture correction: the test resumes a held proposal outside the peer decoder guard; peer setup assigns the exchange object before its initialization finishes, so a real reply can call next on an incompletely prepared object. The evidence is the ten failed real-transport scenarios and Not initialized traces at the dependency setup/next boundary. The correction wraps replay in decodeLock and invokes super.handleMessage, matching the normal path. No product change, new time budget, iteration reduction or weakened assertion. Corrected diagnostic uses the same100 scenarios/eight concurrent pairs; at the observed10 percent baseline, probability of100 clean samples with an unchanged defect is0.9^100=0.0000266.
+
+2026-10-15T03:20:48.675880+00:00 — OBSERVED: {"errors": 0, "failures": 0, "kind": "ordering-corrected100", "retry_records": 0, "rows": 100, "skipped": 0}; native XML and full stacks preserved in /home/u/lanes/util20261014/out/jschfix5-ordering-corrected100-results.
+
+2026-10-15 03:21 UTC — OBSERVED: Corrected fixture diagnostic100 passes100/100 first attempts, zero failures/errors/skips/retry records. Same100 real scenarios and eight genuine concurrent pairs as the preceding90/100 baseline; corrected native XML retained at out/jschfix5-ordering-corrected100-results/. Parent and independent reviewer traced and checked the exact serializer correction. A redundant queued wrapper was stopped before running any second diagnostic; no re-run-to-green occurred. Successful diagnostic stdout was accidentally truncated while preparing that redundant wrapper, but complete native XML including captured per-test output remains and was independently parsed. Baseline full logs and stacks remain intact.
+OBSERVED: Final master gate driver is queued for a slot. It keeps a single slot only while its sequential formatter/compile/test stages are active. It will use the final fixture for product-only reversal6/6, then new-test green6/6 and full master525 once, followed by unexcluded global import/formatter validation and changed-file formatting validation. The unchanged21 neighbor rows already passed once on byte-identical product. No published result claimed yet.

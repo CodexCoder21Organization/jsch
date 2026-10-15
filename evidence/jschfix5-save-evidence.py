@@ -4,7 +4,7 @@ base=Path('/home/u/lanes/util20261014/out');env=os.environ.copy();env['GIT_INDEX
 def git(*args):return subprocess.check_output(['git',*args],env=env,text=True).strip()
 git('read-tree','--empty')
 files=[]
-for pattern in ['jschfix5-findings.md','jschfix5-review.md','jschfix5-*.json','jschfix5-*.txt','jschfix5-*.log','jschfix5-*.patch','jschfix5-*.sh','jschfix5-*.py']:
+for pattern in ['jschfix5-*.java','jschfix5-findings.md','jschfix5-review.md','jschfix5-*.json','jschfix5-*.txt','jschfix5-*.log','jschfix5-*.patch','jschfix5-*.sh','jschfix5-*.py']:
  files+=list(base.glob(pattern))
 for d in base.glob('jschfix5-*-results'):files+=list(d.glob('TEST-*.xml'))
 files+=list((base/'jschfix5-probe-src').rglob('*.java'))
