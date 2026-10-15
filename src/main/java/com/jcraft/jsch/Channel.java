@@ -130,6 +130,7 @@ public abstract class Channel {
   volatile boolean close = false;
   volatile boolean connected = false;
   volatile boolean open_confirmation = false;
+  private Integer openFailureReason;
 
   volatile int exitstatus = -1;
 
@@ -165,6 +166,16 @@ public abstract class Channel {
     open_confirmation = true;
     setRecipient(peerRecipient);
     return true;
+  }
+
+  synchronized void setOpenFailure(int reasonCode) {
+    if (close)
+      return;
+    openFailureReason = reasonCode;
+    setExitStatus(reasonCode);
+    close = true;
+    eof_remote = true;
+    setRecipient(0);
   }
 
   void init() throws JSchException {}
@@ -901,6 +912,8 @@ public abstract class Channel {
       }
       if (close || this.getRecipient() == -1 || !this.open_confirmation) {
         close();
+        if (openFailureReason != null)
+          throw new JSchChannelOpenException(openFailureReason);
         throw new JSchException("channel is not opened.");
       }
       connected = true;
