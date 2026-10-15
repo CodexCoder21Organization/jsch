@@ -146,7 +146,7 @@ allocated peer stream with a close message. During renegotiation, that close wai
 in the session until renegotiation completes, so the reader can continue processing
 the exchange. Session disconnect discards any waiting closes. Each open request accepts one reply;
 repeated replies and replies without a pending open are ignored. If an outgoing open write fails,
-its expected reply is discarded under the packet lock. Any later reply is ignored, including when
+its expected reply is discarded. Any later reply is ignored, including when
 the write failed after sending some or all of the request bytes. Disconnecting a pending stream also ends
 its local open call, and a later acknowledgement releases the peer allocation.
 If the peer never sends a reply, the client has no peer stream identifier to address;
