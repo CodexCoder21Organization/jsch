@@ -82,6 +82,10 @@ class ChannelOpenOutcomeTest {
               ? "com.jcraft.jsch.JSchException: channel is not opened."
               : "com.jcraft.jsch.JSchChannelOpenException: channel is not opened.",
               failure.toString(), "Local close must not erase whether the server declined the open");
+          if (scenario != 0) {
+            JSchChannelOpenException declined = assertInstanceOf(JSchChannelOpenException.class, failure);
+            assertEquals(scenario == 1 ? 3 : -1, declined.getReasonCode());
+          }
           assertEquals(scenario == 1 ? 3 : -1, channel.getExitStatus());
           assertTrue(session.isConnected());
           channel.disconnect();
