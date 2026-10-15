@@ -125,4 +125,60 @@ class PendingCloseBoundTest {
       try { assertTrue(writer.awaitTermination(5,TimeUnit.SECONDS)); } finally { server.stop(true); }
     }
   }
+  @RepeatedTest(3) @Timeout(30)
+  void lateFailureConsumesExpectedReplyBeforeConfirmation() throws Exception {
+    SshServer server = SshServer.setUpDefaultServer();
+    server.setHost("127.0.0.1"); server.setPort(0);
+    SimpleGeneratorHostKeyProvider keys = new SimpleGeneratorHostKeyProvider();
+    keys.setKeySpec(new ECGenParameterSpec("secp256r1")); keys.loadKeys(null);
+    server.setKeyPairProvider(keys); server.setPasswordAuthenticator((u,p,s) -> true);
+    AtomicReference<Peer> peerRef = new AtomicReference<>();
+    server.setSessionFactory(new SessionFactory(server) {
+      protected ServerSessionImpl doCreateSession(IoSession io) throws Exception { Peer p = new Peer(server,io); peerRef.set(p); return p; }
+    });
+    Session session = null;
+    ExecutorService writer = Executors.newSingleThreadExecutor(r -> { Thread t = new Thread(r,"review-bound-writer"); t.setDaemon(true); return t; });
+    try {
+      server.start(); session = new JSch().getSession("test","127.0.0.1",server.getPort());
+      session.setDaemonThread(true); session.setPassword("test".getBytes(StandardCharsets.UTF_8));
+      session.setConfig("StrictHostKeyChecking","no"); session.setConfig("kex","ecdh-sha2-nistp256"); session.setConfig("CheckKexes","ecdh-sha2-nistp256");
+      session.connect(10000); assertEquals(0,session.getTimeout());
+      CountDownLatch markerRead = new CountDownLatch(1);
+      session.setLogger(new Logger() {
+        public boolean isEnabled(int level) { return true; }
+        public void log(int level, String message) {
+          if (message.equals("Received SSH_MSG_UNIMPLEMENTED for 11113")) markerRead.countDown();
+        }
+      });
+      Peer peer = peerRef.get();
+      ChannelExec late = (ChannelExec) session.openChannel("exec"); late.setCommand("late");
+      assertEquals("channel is not opened.", assertThrows(JSchException.class, () -> late.connect(1000)).getMessage());
+      assertTrue(peer.openReplyHeld.await(5, TimeUnit.SECONDS));
+      Buffer original = new ByteArrayBuffer(peer.confirmation);
+      original.getByte(); long localId = original.getUInt();
+      Buffer failure = peer.createBuffer(SshConstants.SSH_MSG_CHANNEL_OPEN_FAILURE, 32);
+      failure.putInt(localId); failure.putInt(1); failure.putString("Open declined"); failure.putString("");
+      IoWriteFuture failedReply = peer.writePacket(failure);
+      assertTrue(failedReply.await(5, TimeUnit.SECONDS)); assertTrue(failedReply.isWritten());
+      byte[] data = peer.confirmation;
+      Buffer confirmation = peer.createBuffer(data[0], data.length);
+      confirmation.putRawBytes(data, 1, data.length - 1);
+      IoWriteFuture confirmedReply = peer.writePacket(confirmation);
+      assertTrue(confirmedReply.await(5, TimeUnit.SECONDS)); assertTrue(confirmedReply.isWritten());
+      peer.heldOpenFuture.setValue(Boolean.TRUE);
+      Buffer marker = peer.createBuffer(SshConstants.SSH_MSG_UNIMPLEMENTED, 4); marker.putInt(11113);
+      IoWriteFuture markedReply = peer.writePacket(marker);
+      assertTrue(markedReply.await(5, TimeUnit.SECONDS)); assertTrue(markedReply.isWritten());
+      assertTrue(markerRead.await(5, TimeUnit.SECONDS), "Reader stopped after a reply following the late failure");
+      Session current = session;
+      Future<?> following = writer.submit(() -> { current.sendKeepAliveMsg(); return null; });
+      following.get(5, TimeUnit.SECONDS);
+      assertTrue(peer.followingWrite.await(5, TimeUnit.SECONDS));
+      assertTrue(session.isConnected());
+      assertEquals(0, peer.closes.get(), "A reply after an open failure must not produce a close notice");
+    } finally {
+      if(session != null)session.disconnect(); writer.shutdownNow();
+      try { assertTrue(writer.awaitTermination(5,TimeUnit.SECONDS)); } finally { server.stop(true); }
+    }
+  }
 }
